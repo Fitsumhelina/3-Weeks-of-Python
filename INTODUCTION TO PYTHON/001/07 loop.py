@@ -12,7 +12,8 @@
 '''
 
 
-# for + our_variable + in +  our_range  + :
+# for + our_variable + in +  our_range  + :  
+#it wiil nor include the second number  eg.(1,10)   it will iterate from 1-9
 #     statment
     
 '''
