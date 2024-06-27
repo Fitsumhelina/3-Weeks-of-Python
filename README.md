@@ -47,5 +47,5 @@ If you find any issues or have suggestions for improvements, feel free to open a
 
 ## Contact
 
-For any questions or further information, please contact [Your Name](mailto:dev.fitsumhelina@gmail.com).
+For any questions or further information, please contact [Fitsum Helina](mailto:dev.fitsumhelina@gmail.com).
 
