@@ -1,0 +1,18 @@
+Welcome to the Python Semi-Hard Course by Fitsum Helina from the Tech Tonic Tribe!
+
+Are you ready to take your Python skills to the next level? Whether you're a beginner looking to deepen your understanding or an intermediate learner aiming to sharpen your expertise, this course is designed to challenge and empower you on your Python journey.
+
+Led by Fitsum Helina, a passionate Python enthusiast from the Tech Tonic Tribe, this course offers a unique learning experience tailored to individuals seeking a deeper dive into Python programming. With a blend of comprehensive lectures, hands-on exercises, and real-world projects, you'll embark on a transformative learning journey that will elevate your Python proficiency.
+
+Throughout the course, you'll explore advanced Python concepts, tackle semi-hard problems, and master essential programming techniques. From data structures and algorithms to object-oriented programming and beyond, you'll gain the skills and confidence needed to tackle complex coding challenges with ease.
+
+Join a vibrant community of fellow learners, engage in lively discussions, and collaborate on projects that will push your boundaries and expand your horizons. Whether you're aspiring to become a Python developer, data scientist, or simply seeking to enhance your problem-solving skills, this course will equip you with the tools and knowledge to succeed in today's fast-paced tech industry.
+
+Ready to unlock your full potential in Python programming? Enroll now and embark on a rewarding journey of learning, growth, and discovery with Fitsum Helina and the Tech Tonic Tribe. Let's code, innovate, and create together!
+
+
+Introduction to python   part two  
+
+course : from tech tonic tribe 
+date :april/17/2024
+lecture by : fitsum helina (full stack dev. )
