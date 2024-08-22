@@ -1,4 +1,3 @@
-Here's an updated version of your README, reflecting your recent Python lecture for the second cohort of Techtonic Tribe students:
 
 ---
 
