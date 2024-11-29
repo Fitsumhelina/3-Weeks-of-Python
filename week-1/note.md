@@ -203,3 +203,202 @@ print(f"You are {age} years old.")
 ```
 
 ---
+
+---
+
+# Variables in Python
+
+## What are Variables?
+
+Variables are containers for storing data values. Python variables do not require explicit declaration, and a variable is created the moment you assign a value to it.
+
+---
+
+### Creating Variables
+
+Python has no specific command to declare a variable. A variable is created by assigning a value to it.
+
+```python
+x = 5      # x is an integer
+y = "John" # y is a string
+
+print(x)   # Output: 5
+print(y)   # Output: John
+```
+
+---
+
+### Dynamic Typing in Python
+
+Variables in Python are **dynamically typed**, meaning their type can change after assignment.
+
+```python
+x = 4       # x is of type int
+x = "Sally" # x is now of type str
+
+print(x)    # Output: Sally
+```
+
+---
+
+### Casting Variables
+
+To explicitly set a variable's type, use **casting**.
+
+```python
+x = str(3)    # x will be '3' (string)
+y = int(3)    # y will be 3 (integer)
+z = float(3)  # z will be 3.0 (float)
+
+print(x, y, z)  # Output: '3', 3, 3.0
+```
+
+---
+
+### Checking the Type of a Variable
+
+You can determine a variable's data type using the `type()` function.
+
+```python
+x = 5
+y = "John"
+
+print(type(x))  # Output: <class 'int'>
+print(type(y))  # Output: <class 'str'>
+```
+
+---
+
+### String Variables: Single or Double Quotes?
+
+String variables can use either single or double quotes.
+
+```python
+x = "John"
+y = 'John'
+
+print(x)  # Output: John
+print(y)  # Output: John
+```
+
+---
+
+### Variable Name Case-Sensitivity
+
+Variable names in Python are **case-sensitive**.
+
+```python
+a = 4       # 'a' is a separate variable
+A = "Sally" # 'A' is a separate variable
+
+print(a)  # Output: 4
+print(A)  # Output: Sally
+```
+
+---
+
+## Variable Names
+
+### Rules for Naming Variables:
+
+1. Must start with a **letter** or an **underscore (`_`)**.  
+2. Cannot start with a number.  
+3. Can only contain **alphanumeric characters** and **underscores** (A-Z, a-z, 0-9, `_`).  
+4. Are **case-sensitive** (e.g., `age`, `Age`, and `AGE` are different).  
+5. Cannot use Python **keywords** (like `if`, `while`, `return`, etc.).
+
+### Examples:
+
+#### Legal Variable Names:
+```python
+myvar = "John"
+my_var = "John"
+_my_var = "John"
+myVar = "John"
+MYVAR = "John"
+myvar2 = "John"
+```
+
+#### Illegal Variable Names:
+```python
+2myvar = "John"  # Starts with a number
+my-var = "John"  # Contains a hyphen (-)
+my var = "John"  # Contains a space
+```
+
+---
+
+## Multi-Word Variable Names
+
+For readability, use these conventions for multi-word variable names:
+
+### 1. **Camel Case**
+The first word is lowercase; each subsequent word starts with an uppercase letter.
+```python
+myVariableName = "John"
+```
+
+### 2. **Pascal Case**
+Every word starts with an uppercase letter.
+```python
+MyVariableName = "John"
+```
+
+### 3. **Snake Case**
+Words are separated by underscores.
+```python
+my_variable_name = "John"
+```
+
+---
+
+## Assigning Values to Variables
+
+### Assigning Multiple Values to Multiple Variables:
+Python allows assigning multiple values to multiple variables in a single line.
+
+```python
+x, y, z = "Orange", "Banana", "Cherry"
+
+print(x)  # Output: Orange
+print(y)  # Output: Banana
+print(z)  # Output: Cherry
+```
+
+### Assigning One Value to Multiple Variables:
+You can assign the same value to multiple variables in a single line.
+
+```python
+x = y = z = "Orange"
+
+print(x)  # Output: Orange
+print(y)  # Output: Orange
+print(z)  # Output: Orange
+```
+
+---
+
+## Local and Global Variables
+
+### Global Variables:
+Variables declared outside a function are **global** and can be accessed both inside and outside of functions.
+
+### Local Variables:
+Variables declared inside a function are **local** and can only be used within that function.
+
+### Example:
+```python
+x = "awesome"  # Global variable
+
+def myfunc():
+    x = "fantastic"  # Local variable
+    print("Python is " + x)
+
+myfunc()  # Output: Python is fantastic
+print("Python is " + x)  # Output: Python is awesome
+```
+
+### **Note:**
+The global variable `x` remains unchanged outside the function.
+
+---
