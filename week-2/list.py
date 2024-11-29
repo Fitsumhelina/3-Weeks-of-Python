@@ -1,4 +1,4 @@
-'''                      Python List
+'''Python List
 
 A python list is an ordered container.
 

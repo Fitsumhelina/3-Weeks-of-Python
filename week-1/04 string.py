@@ -10,7 +10,6 @@ You can display a string literal with the print() function:'''
 
 
 
-
 '''String Length
 To get the length of a string, use the len() function.
 
