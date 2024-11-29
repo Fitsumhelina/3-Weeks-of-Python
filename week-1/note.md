@@ -402,3 +402,72 @@ print("Python is " + x)  # Output: Python is awesome
 The global variable `x` remains unchanged outside the function.
 
 ---
+
+## Data Types
+
+---
+
+## Dynamic Typing in Python
+
+Python does not require explicit declaration of a variable's data type. The data type is automatically determined when you assign a value.
+
+---
+
+### Data Types and Examples
+
+Here are some examples of how Python sets the data type based on the value assigned:
+
+```python
+x = "Hello World"          # str
+x = 20                     # int
+x = 20.5                   # float
+x = True                   # bool
+x = ["apple", "banana"]    # list
+x = ("apple", "banana")    # tuple
+x = {"name": "John", "age": 36}  # dict
+x = {"apple", "banana"}    # set
+```
+
+---
+
+## Casting in Python
+
+Sometimes, you may need to specify the data type explicitly. This is done using **constructor functions**:
+
+- `int()`: Converts to an integer.
+- `float()`: Converts to a floating-point number.
+- `str()`: Converts to a string.
+
+### Examples
+
+#### Integers:
+```python
+x = int(1)       # x will be 1
+y = int(2.8)     # y will be 2
+z = int("3")     # z will be 3
+```
+
+#### Floats:
+```python
+x = float(1)       # x will be 1.0
+y = float(2.8)     # y will be 2.8
+z = float("3")     # z will be 3.0
+w = float("4.2")   # w will be 4.2
+```
+
+#### Strings:
+```python
+x = str("s1")    # x will be 's1'
+y = str(2)       # y will be '2'
+z = str(3.0)     # z will be '3.0'
+```
+
+---
+
+## Summary
+
+- Python's dynamic typing simplifies variable assignment.
+- Use `type()` to check the data type of any object.
+- Use casting (`int()`, `float()`, `str()`) to convert data types when necessary.
+
+
