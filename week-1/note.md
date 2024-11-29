@@ -613,4 +613,130 @@ print(txt)  # Output: My name is John, I am 36
 - Use slicing, concatenation, and methods like `upper()`, `lower()`, and `replace()` for string manipulation.
 - Remember to convert non-strings to strings when combining them with text.
 
+
+### Python Operators: Notes for Teaching
+
+This note serves as a reference for Python operators, grouped by type, with explanations and examples to help learners understand their functionality.
+
+---
+
+### **Arithmetic Operators**
+Arithmetic operators are used for basic mathematical operations.
+
+| Operator | Description         | Example   | Result |
+|----------|---------------------|-----------|--------|
+| `+`      | Addition            | `5 + 3`   | `8`    |
+| `-`      | Subtraction         | `5 - 3`   | `2`    |
+| `*`      | Multiplication      | `5 * 3`   | `15`   |
+| `/`      | Division            | `10 / 2`  | `5.0`  |
+| `%`      | Modulus             | `10 % 3`  | `1`    |
+| `**`     | Exponentiation      | `2 ** 3`  | `8`    |
+| `//`     | Floor Division      | `10 // 3` | `3`    |
+
+**Example Code:**
+```python
+x = 10
+y = 3
+print(x + y)  # Addition: 13
+print(x - y)  # Subtraction: 7
+print(x * y)  # Multiplication: 30
+print(x / y)  # Division: 3.333...
+print(x % y)  # Modulus: 1
+print(x ** y) # Exponentiation: 1000
+print(x // y) # Floor Division: 3
 ```
+
+---
+
+### **Assignment Operators**
+Assignment operators assign values to variables.
+
+| Operator | Syntax    | Equivalent To   |
+|----------|-----------|-----------------|
+| `=`      | `x = 5`   | Assign value    |
+| `+=`     | `x += 3`  | `x = x + 3`     |
+| `-=`     | `x -= 3`  | `x = x - 3`     |
+| `*=`     | `x *= 3`  | `x = x * 3`     |
+| `/=`     | `x /= 3`  | `x = x / 3`     |
+| `%=`     | `x %= 3`  | `x = x % 3`     |
+| `//=`    | `x //= 3` | `x = x // 3`    |
+| `**=`    | `x **= 3` | `x = x ** 3`    |
+
+**Example Code:**
+```python
+x = 5
+x += 3  # x = x + 3
+print(x)  # Output: 8
+x *= 2  # x = x * 2
+print(x)  # Output: 16
+```
+
+---
+
+### **Comparison Operators**
+Comparison operators compare two values and return a boolean (`True` or `False`).
+
+| Operator | Description                   | Example  | Result |
+|----------|-------------------------------|----------|--------|
+| `==`     | Equal to                      | `5 == 5` | `True` |
+| `!=`     | Not equal to                  | `5 != 3` | `True` |
+| `>`      | Greater than                  | `5 > 3`  | `True` |
+| `<`      | Less than                     | `5 < 3`  | `False`|
+| `>=`     | Greater than or equal to      | `5 >= 3` | `True` |
+| `<=`     | Less than or equal to         | `5 <= 3` | `False`|
+
+**Example Code:**
+```python
+a = 10
+b = 5
+print(a == b)  # False
+print(a != b)  # True
+print(a > b)   # True
+print(a <= b)  # False
+```
+
+---
+
+### **Logical Operators**
+Logical operators combine multiple conditional statements.
+
+| Operator | Description                                      | Example                    | Result |
+|----------|--------------------------------------------------|----------------------------|--------|
+| `and`    | Returns `True` if both statements are true       | `x < 5 and x < 10`         | `True` |
+| `or`     | Returns `True` if at least one statement is true | `x < 5 or x < 4`           | `True` |
+| `not`    | Reverses the result of the condition             | `not(x < 5 and x < 10)`    | `False`|
+
+**Example Code:**
+```python
+x = 4
+print(x > 2 and x < 5)  # True
+print(x > 5 or x < 10)  # True
+print(not(x > 3 and x < 5))  # False
+```
+
+---
+
+### **Operator Precedence**
+Python evaluates expressions based on operator precedence, as follows:
+
+1. **Parentheses**: `()`
+2. **Exponentiation**: `**`
+3. **Unary operators**: `+x`, `-x`, `~x`
+4. **Multiplication, Division, Modulus, Floor Division**: `*`, `/`, `%`, `//`
+5. **Addition and Subtraction**: `+`, `-`
+6. **Bitwise shifts**: `<<`, `>>`
+7. **Bitwise AND**: `&`
+8. **Bitwise XOR**: `^`
+9. **Bitwise OR**: `|`
+10. **Comparisons, Identity, Membership**: `==`, `!=`, `>`, `<`, `>=`, `<=`, `is`, `is not`, `in`, `not in`
+11. **Logical NOT**: `not`
+12. **Logical AND**: `and`
+13. **Logical OR**: `or`
+
+**Example:**
+```python
+result = 2 + 5 * 6 / 2  # 2 + (5 * 6) / 2
+print(result)  # Output: 17.0
+```
+
+---
