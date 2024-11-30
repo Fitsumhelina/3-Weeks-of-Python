@@ -785,4 +785,193 @@ person = { "first_name": "John", "last_name": "Doe" }
 print(person["last_name"])
 ```
 ---
+# Python Functions
 
+## **Introduction to Functions**
+A **function** is a group of statements designed to perform a specific task. Functions make your code modular, reusable, and easier to debug.
+
+### Example of a Basic Function:
+```python
+def my_func():
+    x = "Hello World!"  # Task performed by the function
+    print(x)
+
+# Calling the function
+my_func()
+```
+
+---
+
+## **Creating a Function**
+To define a function in Python:
+1. Use the `def` keyword.
+2. Provide a **function name**.
+3. Use **round brackets `()`** followed by a **colon `:`**.
+4. Write a **function body** consisting of statements.
+5. Ensure all lines in the function body are **indented** consistently.
+
+### Example:
+```python
+def my_func():
+    x = "I love Python programming!"
+    print(x)
+
+# Calling the function
+my_func()
+```
+
+### **Indentation**
+- Indentation is mandatory in Python. It determines the scope of the code block.
+- The function body must be indented uniformly.
+
+**Incorrect Indentation Example (produces an error):**
+```python
+def my_func():
+x = "I love Python programming!"  # Not indented
+print(x)  # Not indented
+```
+
+---
+
+## **Calling a Function**
+To execute a function, you must **call it** by its name followed by parentheses `()`.
+
+### Example:
+```python
+def greet():
+    print("Hello!")
+
+# Call the function
+greet()
+```
+
+---
+
+## **Function Parameters/Arguments**
+- **Parameters**: Variables declared in the function definition.
+- **Arguments**: The data passed to the function when it is called.
+
+### Example:
+```python
+def hello(name):  # 'name' is the parameter
+    print("Hello", name)
+
+# Call the function with an argument
+hello("John")  # Output: Hello John
+```
+
+### Multiple Parameters
+You can define a function with multiple parameters and pass multiple arguments separated by commas.
+
+### Example:
+```python
+def add_nums(num1, num2):
+    sum = num1 + num2
+    print("Sum:", sum)
+
+# Call the function with two arguments
+add_nums(4, 3)  # Output: Sum: 7
+```
+
+---
+
+## **Default Arguments**
+You can assign a **default value** to a parameter. If no argument is passed, the default value is used.
+
+### Example:
+```python
+def hello(name="Paul"):
+    print("Hello", name)
+
+hello("John")  # Output: Hello John
+hello()        # Output: Hello Paul (default value used)
+```
+
+---
+
+## **Keyword Arguments**
+- **Keyword arguments** allow you to specify arguments by their parameter names, ignoring the order of arguments.
+
+### Example:
+```python
+def my_func(fruit1, fruit2, fruit3):
+    print("I love", fruit1)
+    print("I love", fruit2)
+    print("I love", fruit3)
+
+# Call the function using keyword arguments
+my_func(fruit3="banana", fruit2="apples", fruit1="orange")
+```
+
+---
+
+## **The `return` Statement**
+- The `return` statement allows a function to send a value back to the caller.
+- Once a `return` statement is executed, the function stops running.
+
+### Example:
+```python
+def add_nums(num1, num2):
+    sum = num1 + num2
+    return sum  # Return the sum to the caller
+
+result = add_nums(4, 3)  # Store the returned value
+print("Result:", result)  # Output: Result: 7
+```
+
+**Important!**
+Any code after a `return` statement will not be executed:
+```python
+def add_nums(num1, num2):
+    sum = num1 + num2
+    return sum
+    print("This line will not be executed")
+
+print(add_nums(4, 3))
+```
+
+---
+
+## **Exercises**
+### **Exercise 1: Fix the Indentation**
+Correct the indentation in the following function:
+```python
+def my_func():
+msg = "Hello World!"
+print(msg)
+my_func()
+```
+
+**Solution:**
+```python
+def my_func():
+  msg = "Hello World!"
+  print(msg)
+
+my_func()
+```
+
+---
+
+### **Exercise 2: Add Two Numbers**
+Create a function called `add_numbers` that takes two parameters, adds them, and returns the result.
+
+**Solution:**
+```python
+def add_numbers(x, y):
+    result = x + y
+    return result
+
+# Call the function and print the result
+print(add_numbers(4, 3))  # Output: 7
+```
+
+---
+
+## **Summary**
+- **Functions** group related tasks into reusable units.
+- Functions can have **parameters** for input and can use the `return` statement to send results back.
+- Indentation is critical in Python; be consistent.
+- Functions can have **default arguments** and use **keyword arguments** to improve flexibility.
+
+This guide covered examples from basic function creation to advanced concepts like parameters, default values, and return statements.
