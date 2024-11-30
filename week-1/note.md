@@ -614,7 +614,7 @@ print(txt)  # Output: My name is John, I am 36
 - Remember to convert non-strings to strings when combining them with text.
 
 
-### Python Operators: Notes for Teaching
+# Python Operators
 
 This note serves as a reference for Python operators, grouped by type, with explanations and examples to help learners understand their functionality.
 
@@ -738,5 +738,254 @@ Python evaluates expressions based on operator precedence, as follows:
 result = 2 + 5 * 6 / 2  # 2 + (5 * 6) / 2
 print(result)  # Output: 17.0
 ```
+---
+
+# Python Conditions 
+
+Python provides a flexible and intuitive way to make decisions using conditional statements. Below is a comprehensive guide, including examples, explanations, and tips.
 
 ---
+
+## **Logical Conditions in Python**
+Python supports the usual logical conditions used in mathematics:
+
+1. **Equals:** `a == b`  
+2. **Not Equals:** `a != b`  
+3. **Less than:** `a < b`  
+4. **Less than or equal to:** `a <= b`  
+5. **Greater than:** `a > b`  
+6. **Greater than or equal to:** `a >= b`  
+
+---
+
+### **The `if` Statement**
+
+The `if` statement allows you to execute a block of code if a condition evaluates to `True`.
+
+#### Example:
+
+```python
+a = 33
+b = 200
+
+if b > a:
+    print("b is greater than a")
+```
+
+**Explanation:**
+- Here, `b` is greater than `a` (`200 > 33`), so the condition is `True`, and the message `"b is greater than a"` is printed.
+
+---
+
+### **Indentation**
+
+Python uses **indentation** (whitespace at the beginning of a line) to define the block of code under the `if` statement. Unlike many other languages, Python does not use curly braces `{}`.
+
+#### Example with Correct Indentation:
+
+```python
+a = 33
+b = 200
+
+if b > a:
+    print("b is greater than a")
+```
+
+#### Example Without Indentation (Raises an Error):
+
+```python
+a = 33
+b = 200
+
+if b > a:
+print("b is greater than a")  # Incorrect indentation
+```
+
+---
+
+### **The `elif` Statement**
+
+The `elif` keyword stands for "else if." It allows you to check multiple conditions in a sequence.
+
+#### Example:
+
+```python
+a = 33
+b = 33
+
+if b > a:
+    print("b is greater than a")
+elif a == b:
+    print("a and b are equal")
+```
+
+**Explanation:**
+- Here, the first condition `b > a` is `False`.
+- The second condition `a == b` is `True`, so `"a and b are equal"` is printed.
+
+---
+
+### **The `else` Statement**
+
+The `else` keyword catches any case that isn’t covered by previous conditions.
+
+#### Example:
+
+```python
+a = 200
+b = 33
+
+if b > a:
+    print("b is greater than a")
+elif a == b:
+    print("a and b are equal")
+else:
+    print("a is greater than b")
+```
+
+**Explanation:**
+- Both `if` and `elif` conditions are `False`, so the `else` block is executed, and `"a is greater than b"` is printed.
+
+---
+
+### **Short Hand `if`**
+
+If you have only one statement to execute, you can write the `if` statement in a single line.
+
+#### Example:
+
+```python
+a = 200
+b = 33
+
+if a > b: print("a is greater than b")
+```
+
+---
+
+### **Short Hand `if ... else`**
+
+You can write an `if ... else` statement in a single line. This is also known as a **ternary operator** or **conditional expression**.
+
+#### Example:
+
+```python
+a = 2
+b = 330
+
+print("A") if a > b else print("B")
+```
+
+**Explanation:**
+- If `a > b`, `"A"` is printed; otherwise, `"B"` is printed.
+
+#### Example with Multiple Conditions:
+
+```python
+a = 330
+b = 330
+
+print("A") if a > b else print("=") if a == b else print("B")
+```
+
+**Explanation:**
+- If `a > b`, `"A"` is printed.
+- If `a == b`, `"="` is printed.
+- Otherwise, `"B"` is printed.
+
+---
+
+### **Logical Operators**
+
+Python provides logical operators to combine multiple conditions:
+
+#### **`and` Operator**
+
+The `and` operator ensures all conditions are `True` for the block to execute.
+
+#### Example:
+
+```python
+a = 200
+b = 33
+c = 500
+
+if a > b and c > a:
+    print("Both conditions are True")
+```
+
+#### **`or` Operator**
+
+The `or` operator executes the block if **at least one condition** is `True`.
+
+#### Example:
+
+```python
+a = 200
+b = 33
+c = 500
+
+if a > b or a > c:
+    print("At least one of the conditions is True")
+```
+
+---
+
+### **Nested `if` Statements**
+
+You can nest `if` statements inside each other to create more complex conditions.
+
+#### Example:
+
+```python
+x = 41
+
+if x > 10:
+    print("Above ten,")
+    if x > 20:
+        print("and also above 20!")
+    else:
+        print("but not above 20.")
+```
+
+**Explanation:**
+- The outer `if` checks if `x > 10` (True).
+- The nested `if` checks if `x > 20` (True), so `"and also above 20!"` is printed.
+
+---
+
+### **The `pass` Statement**
+
+The `pass` statement is used when an `if` statement requires a block of code but you want to leave it empty for now. Without `pass`, Python will throw an error.
+
+#### Example:
+
+```python
+a = 33
+b = 200
+
+if b > a:
+    pass  # Placeholder to avoid errors
+```
+
+---
+
+## **Key Takeaways**
+1. **Indentation is mandatory:** Indentation defines the scope of blocks.
+2. **Logical operators (`and`, `or`)** allow combining conditions.
+3. Use **`elif`** to add multiple conditions and **`else`** to handle unmatched cases.
+4. The **short-hand if-else** is a convenient way to write compact conditions.
+5. **Nested conditions** enable complex logic, but keep readability in mind.
+6. **`pass`** is a useful placeholder for empty blocks.
+
+---
+
+## **Practice Problems**
+
+1. Write a program that checks whether a number is positive, negative, or zero.
+2. Create a program that prints "Eligible to vote" if the age is 18 or above, otherwise prints "Not eligible."
+3. Write a nested `if` program to check whether a number is divisible by 2 and also by 5.
+
+---
+
+
