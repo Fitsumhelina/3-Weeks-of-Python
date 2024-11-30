@@ -995,7 +995,7 @@ Python provides two main types of loops for iterating over data or executing a b
 1. **`for` Loops**  
 2. **`while` Loops**
 
-N.B : python do not have do while loop support !
+> N.B : python do not have do while loop support !
 
 
 Below is a detailed guide on how to use these loops, including examples, tips, and best practices.

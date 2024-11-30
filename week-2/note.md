@@ -407,3 +407,197 @@ print(cars)
 ```
 
 ---
+
+# Python Tuple
+
+Python tuple is an **ordered container**.  
+
+It is similar to lists, but the items in tuples cannot be changed.  
+
+> **Note:** The term "items" can also be referred to as "elements".  
+
+---
+
+## Creating a Tuple  
+
+A tuple is created using **round brackets ()**.  
+
+The objects are placed inside those brackets and separated by commas (,).  
+
+```python
+# Example
+pets = ("dog", "cat", "rabbit")
+print(pets)
+```
+
+---
+
+### Mixed Data Types  
+
+A tuple can contain **mixed data types**.  
+
+```python
+# Example
+x = ("dog", 21, True)
+print(x)
+```
+
+---
+
+## Indexing  
+
+**Indexing** is used to access the items of a tuple.  
+
+Indexing uses **square brackets** and numbers to access individual items.  
+
+- `0` refers to the first item, `1` to the second, and so on.  
+
+```python
+# Example
+pets = ("dog", "cat", "rabbit")
+print(pets[0])  # Output: dog
+print(pets[1])  # Output: cat
+print(pets[2])  # Output: rabbit
+```
+
+---
+
+## Negative Indexing  
+
+**Negative indexing** is used to access items with negative numbers.  
+
+- `-1` refers to the last item, `-2` to the second-to-last, and so on.  
+
+```python
+# Example
+pets = ("dog", "cat", "rabbit")
+print(pets[-1])  # Output: rabbit
+print(pets[-2])  # Output: cat
+print(pets[-3])  # Output: dog
+```
+
+---
+
+## Range of Indexes  
+
+Using a **colon (:)**, you can access a range of items.  
+
+- The first index is the **start** of the range.  
+- The second index is the **end** (not included).  
+
+```python
+# Example
+pets = ("dog", "cat", "rabbit", "fish", "hamster")
+x = pets[1:3]  # Output: ('cat', 'rabbit')
+print(x)
+```
+
+### Omitting Start or End Index  
+
+- If the **start index** is omitted, the range starts from `0`.  
+```python
+# Example
+x = pets[:2]  # Output: ('dog', 'cat')
+print(x)
+```
+
+- If the **end index** is omitted, the range ends with the last item.  
+```python
+# Example
+x = pets[2:]  # Output: ('rabbit', 'fish', 'hamster')
+print(x)
+```
+
+---
+
+## Getting the Length  
+
+To get the **length** or number of items in a tuple, use the `len()` method.  
+
+```python
+# Example
+pets = ("dog", "cat", "rabbit")
+print(len(pets))  # Output: 3
+```
+
+---
+
+## Looping Through a Tuple  
+
+To loop through a tuple and access all its items one-by-one, use a **for loop**.  
+
+```python
+# Example
+pets = ("dog", "cat", "rabbit")
+for pet in pets:
+    print(pet)
+```
+
+---
+
+## Checking if an Item Exists  
+
+To check if an item exists in a tuple, use the **`in`** operator.  
+
+- It returns `True` if the item is found, otherwise `False`.  
+
+```python
+# Example
+pets = ("dog", "cat", "rabbit")
+print("dog" in pets)  # Output: True
+print("python" in pets)  # Output: False
+```
+
+---
+
+## Another Way to Create a Tuple  
+
+You can also create a tuple using the **`tuple()`** constructor.  
+
+```python
+# Example
+pets = tuple(("dog", "cat", "rabbit"))  # Note the double parentheses
+print(pets)
+```
+
+---
+
+## Combine Tuples  
+
+To combine two tuples, use the **addition operator (+)**.  
+
+```python
+# Example
+pets1 = ("dog", "cat", "rabbit")
+pets2 = ("fish", "bird", "hamster")
+all_pets = pets1 + pets2
+print(all_pets)  # Output: ('dog', 'cat', 'rabbit', 'fish', 'bird', 'hamster')
+```
+
+---
+
+## Tuples are Immutable  
+
+In Python, tuples are **immutable** (unchangeable).  
+
+This means you cannot:  
+
+- Change an item.  
+```python
+# Attempt to change an item (Raises an error)
+my_tuple = (1, 2, 3)
+my_tuple[0] = 10  
+```
+
+- Add an item.  
+```python
+# Attempt to add an item (Raises an error)
+my_tuple.append(6)  
+```
+
+- Remove an item.  
+```python
+# Attempt to remove an item (Raises an error)
+my_tuple.remove(3)  
+```
+```
