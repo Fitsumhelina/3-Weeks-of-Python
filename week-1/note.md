@@ -988,4 +988,204 @@ if b > a:
 
 ---
 
+# Python Loops
 
+Python provides two main types of loops for iterating over data or executing a block of code repeatedly:
+
+1. **`for` Loops**  
+2. **`while` Loops**
+
+N.B : python do not have do while loop support !
+
+
+Below is a detailed guide on how to use these loops, including examples, tips, and best practices.
+
+---
+
+## **1. `for` Loops**
+
+The `for` loop is used for iterating over sequences, such as lists, tuples, dictionaries, sets, or strings. It allows you to execute a block of code once for each item in the sequence.
+
+### **Syntax:**
+
+```python
+for variable in sequence:
+    # Code block
+```
+
+---
+
+### **Examples of `for` Loops**
+
+#### **Example 1: Looping Through a List**
+```python
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    print(fruit)
+```
+**Output:**
+```
+apple
+banana
+cherry
+```
+
+---
+
+#### **Example 2: Looping Through a String**
+```python
+for letter in "banana":
+    print(letter)
+```
+**Output:**
+```
+b
+a
+n
+a
+n
+a
+```
+
+---
+
+#### **Example 3: Using a `range()` Function**
+
+The `range()` function generates a sequence of numbers.
+
+- **Syntax:** `range(start, stop, step)`
+  - `start`: Starting number (default is 0)
+  - `stop`: The end of the range (exclusive)
+  - `step`: Increment (default is 1)
+
+```python
+for x in range(1, 10):  # Loop from 1 to 9
+    print(x)
+```
+
+**Output:**
+```
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+---
+
+#### **Example 4: Looping Through Numbers 1–100**
+```python
+for num in range(1, 101):  
+    print(num)
+```
+
+---
+
+## **2. `while` Loops**
+
+A `while` loop continues to execute as long as its condition is `True`.
+
+### **Syntax:**
+
+```python
+while condition:
+    # Code block
+```
+
+---
+
+### **Examples of `while` Loops**
+
+#### **Example 1: Basic While Loop**
+```python
+i = 1
+while i < 6:
+    print(i)
+    i += 1  # Increment to avoid an infinite loop
+```
+**Output:**
+```
+1
+2
+3
+4
+5
+```
+
+**Note:** Always ensure the loop has an **increment or termination condition** to avoid infinite loops.
+
+---
+
+### **Break and Continue Statements**
+
+These statements allow finer control over loop execution.
+
+#### **The `break` Statement**
+
+The `break` statement is used to exit a loop before its natural termination.
+
+**Example: Exit When `i == 3`**
+```python
+i = 1
+while i < 6:
+    print(i)
+    if i == 3:
+        break  # Exit the loop
+    i += 1
+```
+**Output:**
+```
+1
+2
+3
+```
+
+---
+
+#### **The `continue` Statement**
+
+The `continue` statement skips the rest of the code in the current iteration and moves to the next iteration.
+
+**Example: Skip When `i == 3`**
+```python
+i = 0
+while i < 6:
+    i += 1
+    if i == 3:
+        continue  # Skip the iteration
+    print(i)
+```
+**Output:**
+```
+1
+2
+4
+5
+6
+```
+
+---
+
+## **Key Differences Between `for` and `while` Loops**
+
+| Feature                | `for` Loop                           | `while` Loop                    |
+|------------------------|---------------------------------------|----------------------------------|
+| **Purpose**            | Iterates over sequences or ranges.   | Runs until a condition is false.|
+| **Use Case**           | Known iteration count or sequence.   | Unknown iteration count.        |
+| **Example**            | Iterating over a list or range.      | Looping until a condition is met.|
+
+---
+
+## **Practice Problems**
+
+1. Write a `for` loop to print all even numbers from 1 to 20.
+2. Use a `while` loop to calculate the sum of numbers from 1 to 50.
+3. Write a program that loops through a list of numbers and prints "Skip" if the number is 5, using `continue`.
+4. Create a program that breaks out of a loop when a randomly generated number is greater than 90.
+
+These notes provide a foundation for understanding and using loops in Python effectively!
