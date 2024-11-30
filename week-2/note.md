@@ -235,3 +235,175 @@ print(pets)  # Output: ['dog', 'cat', 'rabbit']
    ```
 
 ---
+
+# Python Set
+
+### Introduction to Sets
+A **set** in Python is an unordered collection of unique items. Sets are:
+1. **Unordered**: Items do not have a defined order.
+2. **Immutable (unchangeable)**: The items themselves cannot be changed, but you can add or remove items from the set.
+
+---
+
+### Creating a Set
+To create a set, use curly brackets `{}` and separate the items with commas.
+
+```python
+# Example: Creating a set
+pets = {"dog", "cat", "rabbit"}
+print(pets)
+```
+
+A set can contain mixed data types, but **it cannot include mutable types** like lists, other sets, or dictionaries.
+
+```python
+# Example: Set with mixed data types
+x = {"dog", 21, True}
+print(x)
+```
+
+---
+
+### Accessing Items
+Sets do not support indexing or slicing because they are unordered. However, you can use a `for` loop to access each item.
+
+```python
+# Example: Looping through a set
+pets = {"dog", "cat", "rabbit"}
+for pet in pets:
+    print(pet)
+```
+
+---
+
+### Adding Items to a Set
+You can add items to a set using:
+1. The `add()` method to add a single item.
+2. The `update()` method to add multiple items or merge another set.
+
+```python
+# Example: Adding an item with add()
+pets = {"dog", "cat", "rabbit"}
+pets.add("fish")
+print(pets)
+
+# Example: Adding multiple items with update()
+pets.update(["hamster", "bird"])
+print(pets)
+```
+
+---
+
+### Changing an Item
+You **cannot change items in a set** because they are immutable.
+
+```python
+# Example: Attempting to change an item (not allowed)
+pets = {"dog", "cat"}
+# pets[0] = "fish"  # This will raise an error
+```
+
+---
+
+### Removing Items
+You can remove items from a set using:
+1. `remove()`: Raises an error if the item doesn't exist.
+2. `discard()`: Does not raise an error if the item doesn't exist.
+3. `pop()`: Removes an arbitrary item.
+
+```python
+# Example: Removing an item with remove()
+pets = {"dog", "cat", "rabbit"}
+pets.remove("cat")
+print(pets)
+
+# Example: Removing an item with discard()
+pets.discard("rabbit")
+print(pets)
+
+# Example: Removing an arbitrary item with pop()
+pets = {"dog", "cat", "rabbit"}
+pets.pop()
+print(pets)
+```
+
+---
+
+### Checking the Length of a Set
+To get the number of items in a set, use the `len()` method.
+
+```python
+# Example: Checking the length of a set
+pets = {"dog", "cat", "rabbit"}
+print(len(pets))  # Output: 3
+```
+
+---
+
+### Checking if an Item Exists
+Use the `in` operator to check for the existence of an item in a set.
+
+```python
+# Example: Checking for item existence
+pets = {"dog", "cat", "rabbit"}
+print("dog" in pets)  # Output: True
+print("fish" in pets)  # Output: False
+```
+
+---
+
+### Combining Two Sets
+You can combine two sets using the `update()` method, which excludes duplicates.
+
+```python
+# Example: Combining sets
+x = {1, 2, 3}
+y = {3, 4, 5}
+x.update(y)
+print(x)  # Output: {1, 2, 3, 4, 5}
+```
+
+---
+
+### Difference of Two Sets
+To find the difference between two sets, use the subtraction operator `-`.
+
+```python
+# Example: Difference between sets
+x = {1, 2, 3, 4}
+y = {3, 4, 5, 6}
+print(x - y)  # Output: {1, 2}
+print(y - x)  # Output: {5, 6}
+```
+
+---
+
+### Another Way to Create a Set
+You can use the `set()` constructor to create a set. 
+
+```python
+# Example: Using the set() constructor
+pets = set(("dog", "cat", "rabbit"))  # Double brackets
+print(pets)
+```
+
+---
+
+### Exercises
+#### Exercise 1: Print All Items in a Set
+```python
+# Solution
+cars = {"toyota", "honda", "ford"}
+for car in cars:
+    print(car)
+```
+
+#### Exercise 2: Add an Item to a Set
+```python
+# Solution
+cars = {"toyota", "honda", "ford"}
+cars.add("tesla")
+print(cars)
+```
+
+---
