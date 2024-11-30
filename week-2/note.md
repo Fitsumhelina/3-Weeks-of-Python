@@ -600,4 +600,189 @@ my_tuple.append(6)
 # Attempt to remove an item (Raises an error)
 my_tuple.remove(3)  
 ```
+---
+
+# Python Dictionary  
+
+A dictionary is an unordered and mutable collection of items.  
+A dictionary is written with curly brackets `{}`.  
+Each item in a dictionary contains a **key/value** pair.  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+print(person)
 ```
+
+### Explanation  
+
+In the example above, we have 3 items:  
+1. The first item has a key name of `"first_name"` and its value is `"John"`.  
+2. The second item has a key name of `"last_name"` and its value is `"Doe"`.  
+3. The third item has a key name of `"age"` and its value is `30`.  
+
+---
+
+### Accessing Items  
+
+To access an item, specify the key name of an item inside square brackets `[]`.  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+x = person["first_name"]
+y = person["last_name"]
+z = person["age"]
+print("First Name:", x)
+print("Last Name:", y)
+print("Age:", z)
+```
+
+---
+
+### Handling Non-Existing Keys  
+
+If you try to access a key that does not exist, an error will be raised:  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+print(person["hobby"])  # KeyError
+```
+
+#### Use `get()` to Avoid Errors  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+print(person.get("hobby"))  # None
+```
+
+---
+
+### Adding Items  
+
+To add new items, specify a new key name inside square brackets and assign a value:  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+person["hobby"] = "playing basketball"
+print(person)
+```
+
+---
+
+### Changing an Item's Value  
+
+To modify an item's value, refer to its key name and assign a new value:  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+person["first_name"] = "Jane"
+print(person)
+```
+
+---
+
+### Removing Items  
+
+#### Using `pop()`  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+person.pop("age")
+print(person)
+```
+
+#### Using `del`  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+del person["age"]
+print(person)
+```
+
+---
+
+### Getting the Length of a Dictionary  
+
+Use the `len()` method to get the number of items in a dictionary:  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+print(len(person))  # 3
+```
+
+---
+
+### Checking if a Key Exists  
+
+To check if a key exists, use the `in` operator with an `if` statement:  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+if "age" in person:
+    print('The "age" key exists')
+```
+
+---
+
+### Looping Through a Dictionary  
+
+The `for` loop returns each key in the dictionary:  
+
+```python
+person = { "first_name": "John", "last_name": "Doe", "age": 30 }
+for key in person:
+    print(key, ":", person[key])
+```
+
+---
+
+### Nested Dictionary  
+
+A dictionary can contain another dictionary:  
+
+```python
+employees = {
+    "manager": {
+        "name": "Jane Doe",
+        "age": 29
+    },
+    "programmer": {
+        "name": "John Doe",
+        "age": 30
+    }
+}
+print(employees)
+```
+
+#### Accessing Nested Dictionary Items  
+
+```python
+employees = {
+    "manager": {
+        "name": "Jane Doe",
+        "age": 29
+    },
+    "programmer": {
+        "name": "John Doe",
+        "age": 30
+    }
+}
+print(employees["manager"]["name"])  # Jane Doe
+print(employees["programmer"]["name"])  # John Doe
+```
+
+---
+
+### Exercises  
+
+**Exercise 1:** Create a `person` dictionary with "first_name" and "last_name" items:  
+```python
+person = { "first_name": "John", "last_name": "Doe" }
+```
+
+**Exercise 2:** Print the `"last_name"` item from the `person` dictionary:  
+```python
+person = { "first_name": "John", "last_name": "Doe" }
+print(person["last_name"])
+```
+---
+
