@@ -197,370 +197,340 @@ print(squares)  # Output: [0, 1, 4, 9, 16]
 
 ---
 
+---
+
+
 # 02 Python Set
 
-### Introduction to Sets
-A **set** in Python is an unordered collection of unique items. Sets are:
-1. **Unordered**: Items do not have a defined order.
-2. **Immutable (unchangeable)**: The items themselves cannot be changed, but you can add or remove items from the set.
+## **Introduction to Sets**
+A **set** in Python is an **unordered collection of unique items**. Sets are commonly used for storing unique elements, performing set operations, and removing duplicates.
+
+### **Key Characteristics**
+- **Unordered**: Items do not have a fixed position or order.
+- **Mutable**: You can add or remove items, but the individual items must be immutable (e.g., strings, numbers, tuples).
+- **Unique**: Duplicate items are automatically removed.
+  
+---
+
+## **Creating a Set**
+You can create a set using curly brackets `{}` or the `set()` constructor.
+
+### **Examples**
+```python
+# Using curly brackets
+fruits = {"apple", "banana", "cherry"}
+print(fruits)  # Output: {'apple', 'banana', 'cherry'}
+
+# Using the set() constructor
+colors = set(["red", "blue", "green"])
+print(colors)  # Output: {'red', 'blue', 'green'}
+```
+
+### **Note**
+Sets cannot contain mutable types like lists, dictionaries, or other sets. They can, however, include immutable types like strings, numbers, and tuples.
 
 ---
 
-### Creating a Set
-To create a set, use curly brackets `{}` and separate the items with commas.
+## **Accessing Items**
+Since sets are unordered, they do not support indexing or slicing. However, you can loop through a set.
 
+### **Example**
 ```python
-# Example: Creating a set
-pets = {"dog", "cat", "rabbit"}
-print(pets)
-```
-
-A set can contain mixed data types, but **it cannot include mutable types** like lists, other sets, or dictionaries.
-
-```python
-# Example: Set with mixed data types
-x = {"dog", 21, True}
-print(x)
-```
-
----
-
-### Accessing Items
-Sets do not support indexing or slicing because they are unordered. However, you can use a `for` loop to access each item.
-
-```python
-# Example: Looping through a set
 pets = {"dog", "cat", "rabbit"}
 for pet in pets:
     print(pet)
+# Output (order may vary):
+# dog
+# cat
+# rabbit
 ```
 
 ---
 
-### Adding Items to a Set
-You can add items to a set using:
-1. The `add()` method to add a single item.
-2. The `update()` method to add multiple items or merge another set.
+## **Adding Items to a Set**
+You can add elements to a set using:
+1. **`add()`**: Adds a single item.
+2. **`update()`**: Adds multiple items or merges another iterable.
 
+### **Examples**
 ```python
-# Example: Adding an item with add()
-pets = {"dog", "cat", "rabbit"}
-pets.add("fish")
-print(pets)
-
-# Example: Adding multiple items with update()
-pets.update(["hamster", "bird"])
-print(pets)
-```
-
----
-
-### Changing an Item
-You **cannot change items in a set** because they are immutable.
-
-```python
-# Example: Attempting to change an item (not allowed)
+# Adding a single item
 pets = {"dog", "cat"}
-# pets[0] = "fish"  # This will raise an error
+pets.add("rabbit")
+print(pets)  # Output: {'dog', 'cat', 'rabbit'}
+
+# Adding multiple items
+pets.update(["parrot", "fish"])
+print(pets)  # Output: {'dog', 'cat', 'rabbit', 'parrot', 'fish'}
 ```
 
 ---
 
-### Removing Items
-You can remove items from a set using:
-1. `remove()`: Raises an error if the item doesn't exist.
-2. `discard()`: Does not raise an error if the item doesn't exist.
-3. `pop()`: Removes an arbitrary item.
+## **Removing Items**
+Sets allow the removal of elements using:
+1. **`remove()`**: Removes an item; raises an error if the item is not found.
+2. **`discard()`**: Removes an item; does not raise an error if the item is not found.
+3. **`pop()`**: Removes and returns a random item.
+4. **`clear()`**: Removes all items from the set.
 
+### **Examples**
 ```python
-# Example: Removing an item with remove()
 pets = {"dog", "cat", "rabbit"}
+
+# Using remove()
 pets.remove("cat")
-print(pets)
+print(pets)  # Output: {'dog', 'rabbit'}
 
-# Example: Removing an item with discard()
+# Using discard()
 pets.discard("rabbit")
-print(pets)
+print(pets)  # Output: {'dog'}
 
-# Example: Removing an arbitrary item with pop()
-pets = {"dog", "cat", "rabbit"}
-pets.pop()
-print(pets)
+# Using pop()
+pets.pop()  # Removes a random item
+print(pets)  # Output: {}
+
+# Clearing the set
+pets = {"dog", "cat"}
+pets.clear()
+print(pets)  # Output: set()
 ```
 
 ---
 
-### Checking the Length of a Set
-To get the number of items in a set, use the `len()` method.
+## **Set Operations**
+Sets support various operations for combining, comparing, and modifying sets.
 
+### **Union**
+Combines two sets, removing duplicates. Use the `union()` method or the `|` operator.
 ```python
-# Example: Checking the length of a set
-pets = {"dog", "cat", "rabbit"}
-print(len(pets))  # Output: 3
-```
-
----
-
-### Checking if an Item Exists
-Use the `in` operator to check for the existence of an item in a set.
-
-```python
-# Example: Checking for item existence
-pets = {"dog", "cat", "rabbit"}
-print("dog" in pets)  # Output: True
-print("fish" in pets)  # Output: False
-```
-
----
-
-### Combining Two Sets
-You can combine two sets using the `update()` method, which excludes duplicates.
-
-```python
-# Example: Combining sets
 x = {1, 2, 3}
 y = {3, 4, 5}
-x.update(y)
-print(x)  # Output: {1, 2, 3, 4, 5}
+print(x.union(y))  # Output: {1, 2, 3, 4, 5}
+```
+
+### **Intersection**
+Finds common items between two sets. Use the `intersection()` method or the `&` operator.
+```python
+print(x.intersection(y))  # Output: {3}
+```
+
+### **Difference**
+Finds items in one set but not in the other. Use the `difference()` method or the `-` operator.
+```python
+print(x.difference(y))  # Output: {1, 2}
+```
+
+### **Symmetric Difference**
+Finds items that are in either set but not in both. Use the `symmetric_difference()` method or the `^` operator.
+```python
+print(x.symmetric_difference(y))  # Output: {1, 2, 4, 5}
 ```
 
 ---
 
-### Difference of Two Sets
-To find the difference between two sets, use the subtraction operator `-`.
+## **Other Useful Methods**
+- **`issubset()`**: Checks if one set is a subset of another.
+- **`issuperset()`**: Checks if one set contains another.
+- **`isdisjoint()`**: Checks if two sets have no items in common.
 
+---
+
+## **Checking for Membership**
+Use the `in` and `not in` operators to check if an item exists in a set.
 ```python
-# Example: Difference between sets
-x = {1, 2, 3, 4}
-y = {3, 4, 5, 6}
-print(x - y)  # Output: {1, 2}
-print(y - x)  # Output: {5, 6}
+fruits = {"apple", "banana", "cherry"}
+print("apple" in fruits)  # Output: True
+print("kiwi" not in fruits)  # Output: True
 ```
 
 ---
 
-### Another Way to Create a Set
-You can use the `set()` constructor to create a set. 
-
+## **Set Length**
+Use the `len()` function to get the number of items in a set.
 ```python
-# Example: Using the set() constructor
-pets = set(("dog", "cat", "rabbit"))  # Double brackets
-print(pets)
+fruits = {"apple", "banana", "cherry"}
+print(len(fruits))  # Output: 3
 ```
 
 ---
 
-### Exercises
-#### Exercise 1: Print All Items in a Set
-```python
-# Solution
-cars = {"toyota", "honda", "ford"}
-for car in cars:
-    print(car)
-```
+## **Exercises**
 
-#### Exercise 2: Add an Item to a Set
-```python
-# Solution
-cars = {"toyota", "honda", "ford"}
-cars.add("tesla")
-print(cars)
-```
+### **Easy Exercises**
+1. Create a set of five vegetables and print it.
+2. Add `"mango"` to the set `{"apple", "banana", "cherry"}`.
+3. Use a loop to print each item in the set `{"python", "java", "c++"}`.
+4. Remove `"dog"` from the set `{"dog", "cat", "rabbit"}`.
+5. Check if `"cat"` is in the set `{"dog", "cat", "rabbit"}`.
 
 ---
+
+### **Medium Exercises**
+1. Combine the sets `{1, 2, 3}` and `{3, 4, 5}` using `union()`.
+2. Find the intersection of `{1, 2, 3, 4}` and `{3, 4, 5, 6}`.
+3. Use the `difference()` method to find items in `{1, 2, 3, 4}` but not in `{3, 4, 5, 6}`.
+4. Create a set of numbers from 1 to 5 and remove all items using `clear()`.
+5. Write a program to find duplicates in a list using a set.
+
+---
+
+### **Hard Exercises**
+1. Use a set to remove duplicate characters from a string.
+   - Input: `"hello"`
+   - Output: `{'h', 'e', 'l', 'o'}`
+2. Create two sets of student names and find the symmetric difference.
+3. Check if the set `{1, 2}` is a subset of `{1, 2, 3}`.
+4. Write a function that takes two sets and returns a new set with all unique elements from both sets.
+5. Create a program that counts the unique words in a sentence using a set.
+
+---
+
 
 # 03 Python Tuple
 
-Python tuple is an **ordered container**.  
-
-It is similar to lists, but the items in tuples cannot be changed.  
-
-> **Note:** The term "items" can also be referred to as "elements".  
+Tuples in Python are ordered, immutable containers that can hold a collection of items. Tuples are similar to lists but differ in their immutability, meaning their items cannot be modified after creation. This feature makes tuples an excellent choice for storing fixed data that shouldn't change.
 
 ---
 
-## Creating a Tuple  
+### **Key Characteristics of Tuples**
+1. **Ordered**: The items in a tuple have a defined order.
+2. **Immutable**: Once created, you cannot change, add, or remove items.
+3. **Supports Mixed Data Types**: Tuples can hold elements of different data types (e.g., strings, integers, booleans).
 
-A tuple is created using **round brackets ()**.  
+---
 
-The objects are placed inside those brackets and separated by commas (,).  
+### **Creating a Tuple**
+Tuples are created using **round brackets** `()`. Items are separated by commas.
 
+#### Example:
 ```python
-# Example
 pets = ("dog", "cat", "rabbit")
-print(pets)
+print(pets)  # Output: ('dog', 'cat', 'rabbit')
+```
+
+#### Mixed Data Types:
+```python
+mixed = ("dog", 21, True)
+print(mixed)  # Output: ('dog', 21, True)
+```
+
+#### Using the `tuple()` Constructor:
+```python
+pets = tuple(("dog", "cat", "rabbit"))  # Note the double parentheses
+print(pets)  # Output: ('dog', 'cat', 'rabbit')
 ```
 
 ---
 
-### Mixed Data Types  
+### **Accessing Tuple Items**
+Tuples support various ways to access their elements using **indexing**, **negative indexing**, and **slicing**.
 
-A tuple can contain **mixed data types**.  
-
+#### Indexing:
 ```python
-# Example
-x = ("dog", 21, True)
-print(x)
-```
-
----
-
-## Indexing  
-
-**Indexing** is used to access the items of a tuple.  
-
-Indexing uses **square brackets** and numbers to access individual items.  
-
-- `0` refers to the first item, `1` to the second, and so on.  
-
-```python
-# Example
 pets = ("dog", "cat", "rabbit")
-print(pets[0])  # Output: dog
-print(pets[1])  # Output: cat
-print(pets[2])  # Output: rabbit
+print(pets[0])  # Output: 'dog'
+print(pets[2])  # Output: 'rabbit'
 ```
 
----
-
-## Negative Indexing  
-
-**Negative indexing** is used to access items with negative numbers.  
-
-- `-1` refers to the last item, `-2` to the second-to-last, and so on.  
-
+#### Negative Indexing:
 ```python
-# Example
-pets = ("dog", "cat", "rabbit")
-print(pets[-1])  # Output: rabbit
-print(pets[-2])  # Output: cat
-print(pets[-3])  # Output: dog
+print(pets[-1])  # Output: 'rabbit' (last item)
+print(pets[-2])  # Output: 'cat'
 ```
 
----
-
-## Range of Indexes  
-
-Using a **colon (:)**, you can access a range of items.  
-
-- The first index is the **start** of the range.  
-- The second index is the **end** (not included).  
+#### Slicing:
+- Use a colon `:` to specify a range.
+- The start index is inclusive, while the end index is exclusive.
 
 ```python
-# Example
 pets = ("dog", "cat", "rabbit", "fish", "hamster")
-x = pets[1:3]  # Output: ('cat', 'rabbit')
-print(x)
+print(pets[1:4])  # Output: ('cat', 'rabbit', 'fish')
 ```
 
-### Omitting Start or End Index  
-
-- If the **start index** is omitted, the range starts from `0`.  
+#### Omitting Start or End Index:
 ```python
-# Example
-x = pets[:2]  # Output: ('dog', 'cat')
-print(x)
-```
-
-- If the **end index** is omitted, the range ends with the last item.  
-```python
-# Example
-x = pets[2:]  # Output: ('rabbit', 'fish', 'hamster')
-print(x)
+print(pets[:3])  # Output: ('dog', 'cat', 'rabbit')
+print(pets[2:])  # Output: ('rabbit', 'fish', 'hamster')
 ```
 
 ---
 
-## Getting the Length  
+### **Tuple Operations**
 
-To get the **length** or number of items in a tuple, use the `len()` method.  
-
+#### Getting the Length:
+Use the `len()` function to determine the number of items in a tuple.
 ```python
-# Example
-pets = ("dog", "cat", "rabbit")
-print(len(pets))  # Output: 3
+print(len(pets))  # Output: 5
 ```
 
----
-
-## Looping Through a Tuple  
-
-To loop through a tuple and access all its items one-by-one, use a **for loop**.  
-
+#### Looping Through a Tuple:
 ```python
-# Example
-pets = ("dog", "cat", "rabbit")
 for pet in pets:
     print(pet)
+# Output:
+# dog
+# cat
+# rabbit
+# fish
+# hamster
 ```
 
----
-
-## Checking if an Item Exists  
-
-To check if an item exists in a tuple, use the **`in`** operator.  
-
-- It returns `True` if the item is found, otherwise `False`.  
-
+#### Checking Membership:
+Use the `in` operator to check if an item exists in the tuple.
 ```python
-# Example
-pets = ("dog", "cat", "rabbit")
-print("dog" in pets)  # Output: True
-print("python" in pets)  # Output: False
+print("cat" in pets)  # Output: True
+print("lion" in pets)  # Output: False
 ```
 
----
-
-## Another Way to Create a Tuple  
-
-You can also create a tuple using the **`tuple()`** constructor.  
-
+#### Combining Tuples:
+You can combine two tuples using the `+` operator.
 ```python
-# Example
-pets = tuple(("dog", "cat", "rabbit"))  # Note the double parentheses
-print(pets)
-```
-
----
-
-## Combine Tuples  
-
-To combine two tuples, use the **addition operator (+)**.  
-
-```python
-# Example
-pets1 = ("dog", "cat", "rabbit")
-pets2 = ("fish", "bird", "hamster")
+pets1 = ("dog", "cat")
+pets2 = ("rabbit", "fish")
 all_pets = pets1 + pets2
-print(all_pets)  # Output: ('dog', 'cat', 'rabbit', 'fish', 'bird', 'hamster')
+print(all_pets)  # Output: ('dog', 'cat', 'rabbit', 'fish')
 ```
 
 ---
 
-## Tuples are Immutable  
+### **Immutability of Tuples**
+Since tuples are immutable:
+1. **Items cannot be changed**:
+    ```python
+    my_tuple = (1, 2, 3)
+    my_tuple[0] = 10  # Raises an error
+    ```
+2. **Items cannot be added or removed**:
+    ```python
+    my_tuple.append(4)  # Raises an error
+    my_tuple.remove(2)  # Raises an error
+    ```
 
-In Python, tuples are **immutable** (unchangeable).  
+---
 
-This means you cannot:  
+### **Tuple Exercises**
 
-- Change an item.  
-```python
-# Attempt to change an item (Raises an error)
-my_tuple = (1, 2, 3)
-my_tuple[0] = 10  
-```
+#### **Easy Exercises**
+1. Create a tuple of five colors and print it.
+2. Access the second and last item of a tuple.
+3. Slice the tuple `("red", "blue", "green", "yellow", "purple")` to get the middle three items.
+4. Check if `"orange"` exists in the tuple `("red", "blue", "green")`.
+5. Use a loop to print all items in the tuple `("apple", "banana", "cherry")`.
 
-- Add an item.  
-```python
-# Attempt to add an item (Raises an error)
-my_tuple.append(6)  
-```
+#### **Medium Exercises**
+1. Create two tuples and merge them into one.
+2. Write a program to count how many times a specific item appears in a tuple.
+3. Extract only the numeric items from a tuple `("apple", 42, 3.14, "banana", 7)`.
+4. Find the length of the tuple `("a", "b", "c", "d", "e")` without using `len()`.
+5. Use negative indexing to reverse a tuple.
 
-- Remove an item.  
-```python
-# Attempt to remove an item (Raises an error)
-my_tuple.remove(3)  
-```
+#### **Hard Exercises**
+1. Write a function to check if two tuples have at least one common item.
+2. Convert a tuple of strings to uppercase: `("hello", "world") → ("HELLO", "WORLD")`.
+3. Write a program to find the unique elements in two tuples.
+4. Implement a function that takes a tuple and returns a new tuple with only even numbers.
+5. Create a tuple of mixed data types and filter out only the string elements.
+
 ---
 
 # 04 Python Dictionary  
@@ -746,6 +716,7 @@ person = { "first_name": "John", "last_name": "Doe" }
 print(person["last_name"])
 ```
 ---
+
 # 05 Python Functions
 
 ## **Introduction to Functions**
