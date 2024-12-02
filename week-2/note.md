@@ -1,173 +1,149 @@
-# Python Lists
-A **Python list** is an **ordered container** that holds items of various data types. Lists are one of the most versatile and commonly used data structures in Python.
 
-### **Creating a List**
-A list is created using **square brackets (`[]`)**. Items are placed inside the brackets, separated by **commas (`,`).**
 
-#### **Example:**
+![logo](./../image//week1.png)
+
+# Cataloge
+### 01 [python-lists](#01-python-lists)
+### 02 [python-set](#02-python-set)
+### 03 [python-tuple](#03-python-tuple)
+### 04 [python-dictionary](#04-python-dictionary)
+### 05 [python-functions](#05-python-functions)
+
+
+---
+
+# 01 Python Lists  
+
+## **Introduction**  
+A Python list is an **ordered, mutable collection** that can hold items of various data types. Lists are versatile and widely used in Python for data manipulation.  
+
+---
+
+## **1. Creating a List**  
+### Syntax  
+Use square brackets `[]` to define a list. Items are separated by commas `,`.  
+
+**Examples**  
 ```python
-# Creating a simple list of pet names
+# Simple list of strings
 pets = ["dog", "cat", "rabbit"]
 print(pets)
-```
 
-### **Lists with Mixed Data Types**
-Python lists can store elements of **different data types** within the same list.
-
-#### **Example:**
-```python
-# A list with mixed data types
+# List with mixed data types
 mixed_list = ["dog", 21, True]
 print(mixed_list)
 ```
 
+### Using the `list()` Constructor  
+```python
+# Creating a list using the constructor
+pets = list(("dog", "cat", "rabbit"))
+print(pets)  # Output: ['dog', 'cat', 'rabbit']
+```
+
 ---
 
-## **Accessing List Elements**
-### **Indexing**
-Use **indexing** to access specific elements in a list. Indexing starts from **0 for the first item**, **1 for the second**, and so on.
+## **2. Accessing List Elements**  
+### **Indexing**  
+List indexing starts at **0**. Use indices to access specific elements.  
 
-#### **Example:**
+**Examples**  
 ```python
-# Accessing items by index
 pets = ["dog", "cat", "rabbit"]
 print(pets[0])  # Output: dog
-print(pets[1])  # Output: cat
 print(pets[2])  # Output: rabbit
 ```
 
-### **Negative Indexing**
-Negative indexing starts from **-1 for the last item**, **-2 for the second last**, and so on.
-
-#### **Example:**
+### **Negative Indexing**  
+Negative indices start from `-1` for the last item.  
 ```python
-# Accessing items using negative indexing
 pets = ["dog", "cat", "rabbit"]
 print(pets[-1])  # Output: rabbit
 print(pets[-2])  # Output: cat
-print(pets[-3])  # Output: dog
 ```
 
----
-
-## **Accessing a Range of Items**
-### **Range of Indexes**
-Use a **colon (`:`)** to access a range of items. The range includes the **start index** but excludes the **end index**.
-
-#### **Example:**
+### **Range of Indexes**  
+Use a colon `:` to access a range of items.  
 ```python
 pets = ["dog", "cat", "rabbit", "fish", "hamster"]
-print(pets[1:3])  # Output: ['cat', 'rabbit']
-```
 
-#### **Shortcut:**
-- **Omitting the Start Index:** Starts from the beginning of the list.
-```python
-print(pets[:2])  # Output: ['dog', 'cat']
-```
-- **Omitting the End Index:** Includes all items to the end of the list.
-```python
-print(pets[2:])  # Output: ['rabbit', 'fish', 'hamster']
+# From index 1 to 3 (excluding 3)
+print(pets[1:3])  # Output: ['cat', 'rabbit']
+
+# Shortcut examples
+print(pets[:2])  # Output: ['dog', 'cat']  # Start from beginning
+print(pets[2:])  # Output: ['rabbit', 'fish', 'hamster']  # Till the end
 ```
 
 ---
 
-## **Modifying Lists**
-### **Adding Items**
-#### **Using `append()`**
-The `append()` method adds an item to the **end** of the list.
-
-#### **Example:**
+## **3. Modifying Lists**  
+### **Adding Items**  
+#### Using `append()`  
+Adds an item to the **end** of the list.  
 ```python
 pets = ["dog", "cat"]
 pets.append("rabbit")
 print(pets)  # Output: ['dog', 'cat', 'rabbit']
 ```
 
-#### **Using `insert()`**
-The `insert()` method adds an item at a **specific index**.
-
-#### **Example:**
+#### Using `insert()`  
+Adds an item at a **specific index**.  
 ```python
 pets = ["dog", "cat", "fish"]
-pets.insert(0, "rabbit")  # Insert 'rabbit' at index 0
-pets.insert(2, "hamster") # Insert 'hamster' at index 2
-print(pets)  # Output: ['rabbit', 'dog', 'hamster', 'cat', 'fish']
+pets.insert(1, "rabbit")  # Insert at index 1
+print(pets)  # Output: ['dog', 'rabbit', 'cat', 'fish']
 ```
 
----
-
-### **Deleting Items**
-#### **Using `pop()`**
-The `pop()` method removes the **last item** by default or an item at a specified index.
-
-#### **Example:**
+### **Deleting Items**  
+#### Using `pop()`  
+Removes the last item (default) or an item at a specified index.  
 ```python
 pets = ["dog", "cat", "rabbit"]
-pets.pop()
+pets.pop()  # Remove last item
 print(pets)  # Output: ['dog', 'cat']
 ```
 
-#### **Using `remove()`**
-The `remove()` method deletes an item by **value.**
-
-#### **Example:**
+#### Using `remove()`  
+Deletes an item by value.  
 ```python
 pets = ["dog", "cat", "rabbit"]
 pets.remove("cat")
 print(pets)  # Output: ['dog', 'rabbit']
 ```
 
-#### **Using `del` Keyword**
-Use the `del` keyword to remove an item by **index.**
-
-#### **Example:**
+#### Using `del` Keyword  
+Deletes an item by index or clears the list.  
 ```python
 pets = ["dog", "cat", "rabbit"]
-del pets[1]  # Deletes 'cat'
+del pets[1]  # Delete 'cat'
 print(pets)  # Output: ['dog', 'rabbit']
 ```
 
 ---
 
-## **Other List Operations**
-### **Getting the Length**
-Use the `len()` method to get the **number of items** in a list.
+## **4. Other Operations**  
 
-#### **Example:**
+### **Get the Length**  
 ```python
 pets = ["dog", "cat", "rabbit"]
 print(len(pets))  # Output: 3
 ```
 
-### **Changing an Item's Value**
-Access the index of the item you want to modify and use the **assignment operator (`=`)**.
-
-#### **Example:**
+### **Modify Item**  
 ```python
 pets = ["dog", "cat", "rabbit"]
-pets[2] = "fish"  # Change 'rabbit' to 'fish'
+pets[2] = "fish"
 print(pets)  # Output: ['dog', 'cat', 'fish']
 ```
 
----
-
-### **Checking for an Item**
-Use the **`in` operator** to check if an item exists in a list.
-
-#### **Example:**
+### **Check for an Item**  
 ```python
 pets = ["dog", "cat", "rabbit"]
-print("dog" in pets)     # Output: True
-print("python" in pets)  # Output: False
+print("dog" in pets)  # Output: True
 ```
 
----
-
-### **Extending a List**
-The `extend()` method combines two lists.
-
-#### **Example:**
+### **Extend a List**  
 ```python
 nums1 = [1, 2, 3]
 nums2 = [4, 5, 6]
@@ -177,10 +153,7 @@ print(nums1)  # Output: [1, 2, 3, 4, 5, 6]
 
 ---
 
-### **Looping Through a List**
-Use a **`for` loop** to iterate through all the items in a list.
-
-#### **Example:**
+## **5. Looping Through a List**  
 ```python
 pets = ["dog", "cat", "rabbit"]
 for pet in pets:
@@ -189,54 +162,42 @@ for pet in pets:
 
 ---
 
-## **Creating Lists**
-### **Using the `list()` Constructor**
-An alternative way to create a list is by using the **`list()` constructor.**
-
-#### **Example:**
+## **6. List Comprehension**  
+An elegant way to create or modify lists.  
 ```python
-pets = list(("dog", "cat", "rabbit"))  # Note the double parentheses
-print(pets)  # Output: ['dog', 'cat', 'rabbit']
+# Create a list of squares
+squares = [x**2 for x in range(5)]
+print(squares)  # Output: [0, 1, 4, 9, 16]
 ```
 
 ---
 
-## **Practice Exercises**
-1. **Create a list of car brands and print it.**
-   ```python
-   cars = ["Toyota", "Honda", "Ford"]
-   print(cars)
-   ```
+## **Exercises**  
 
-2. **Access and print "Toyota" from the list of cars.**
-   ```python
-   cars = ["Toyota", "Honda", "Ford"]
-   print(cars[0])  # Output: Toyota
-   ```
+### **Easy**  
+1. Create a list of five fruit names and print it.  
+2. Access and print the last element in the list `["apple", "banana", "cherry"]`.  
+3. Add `"kiwi"` to the list `["apple", "banana"]` and print the updated list.  
+4. Remove `"banana"` from the list `["apple", "banana", "cherry"]`.  
+5. Use a loop to print each item in the list `["cat", "dog", "fish"]`.  
 
-3. **Add a new car brand to the list and print it.**
-   ```python
-   cars.append("BMW")
-   print(cars)  # Output: ['Toyota', 'Honda', 'Ford', 'BMW']
-   ```
+### **Medium**  
+1. Create a list of numbers from 1 to 10 and print only the even numbers.  
+2. Reverse the list `["red", "green", "blue"]`.  
+3. Combine the two lists `[1, 2, 3]` and `[4, 5, 6]` into one list.  
+4. Modify the list `[5, 10, 15]` by replacing `10` with `12`.  
+5. Find the length of the list `["a", "b", "c", "d"]` and print it.  
 
-4. **Remove "Ford" from the list and print it.**
-   ```python
-   cars.remove("Ford")
-   print(cars)  # Output: ['Toyota', 'Honda', 'BMW']
-   ```
-
-5. **Combine two lists of numbers.**
-   ```python
-   nums1 = [1, 2, 3]
-   nums2 = [4, 5, 6]
-   nums1.extend(nums2)
-   print(nums1)  # Output: [1, 2, 3, 4, 5, 6]
-   ```
+### **Hard**  
+1. Use list comprehension to generate a list of squares for numbers from 1 to 10, excluding numbers divisible by 3.  
+2. Create a nested list (matrix) and print the second row.  
+3. Write a program to find duplicates in a list `[1, 2, 3, 2, 4, 5, 1]`.  
+4. Sort the list `[3, 1, 4, 1, 5, 9]` in descending order without using the `sort()` method.  
+5. Flatten a nested list `[[1, 2], [3, 4], [5, 6]]` into a single list `[1, 2, 3, 4, 5, 6]`.  
 
 ---
 
-# Python Set
+# 02 Python Set
 
 ### Introduction to Sets
 A **set** in Python is an unordered collection of unique items. Sets are:
@@ -408,7 +369,7 @@ print(cars)
 
 ---
 
-# Python Tuple
+# 03 Python Tuple
 
 Python tuple is an **ordered container**.  
 
@@ -602,7 +563,7 @@ my_tuple.remove(3)
 ```
 ---
 
-# Python Dictionary  
+# 04 Python Dictionary  
 
 A dictionary is an unordered and mutable collection of items.  
 A dictionary is written with curly brackets `{}`.  
@@ -785,7 +746,7 @@ person = { "first_name": "John", "last_name": "Doe" }
 print(person["last_name"])
 ```
 ---
-# Python Functions
+# 05 Python Functions
 
 ## **Introduction to Functions**
 A **function** is a group of statements designed to perform a specific task. Functions make your code modular, reusable, and easier to debug.
@@ -975,3 +936,9 @@ print(add_numbers(4, 3))  # Output: 7
 - Functions can have **default arguments** and use **keyword arguments** to improve flexibility.
 
 This guide covered examples from basic function creation to advanced concepts like parameters, default values, and return statements.
+
+---
+
+🎉 CONGRATULATIONS ! 🎉
+
+[week 3 >>](./../Week-3/OOP.md)

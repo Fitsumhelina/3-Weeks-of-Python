@@ -1,7 +1,16 @@
+![logo](./../image//week1.png)
+
+# cataloge
+### 01 [python syntax](#01-python-syntax)
+### 02 [variables-in-python](#02-variables-in-python)
+### 03 [data-types-in-python](#03-data-types-in-python)
+### 04 [python-strings](#04-python-strings)
+### 05 [python-operators](#05-python-operators)
+### 06 [python-conditions](#06-python-conditions)
+### 07 [python-loops](#07-python-loops)
 
 ---
-
-# Python syntax: 
+# 01 Python syntax: 
 
 ## Statements
 
@@ -37,7 +46,7 @@ If the indentation is inconsistent, Python will raise an `IndentationError`.
 ## Variables
 
 ### Definition:
-Variables are containers for storing data values. In Python, you don't need to declare the type of variable explicitly. The type is inferred based on the assigned value.
+Variables are containers for storing data values. In Python, you don't need to declare the type of variable **explicitly**. The type is inferred based on the assigned value.
 
 ### Example:
 ```python
@@ -206,7 +215,7 @@ print(f"You are {age} years old.")
 
 ---
 
-# Variables in Python
+# 02 Variables in Python
 
 ## What are Variables?
 
@@ -403,7 +412,7 @@ The global variable `x` remains unchanged outside the function.
 
 ---
 
-# Data Types
+# 03 Data Types in python
 
 ---
 
@@ -473,7 +482,7 @@ z = str(3.0)     # z will be '3.0'
 Here’s the reformatted content in Markdown for teaching purposes, including notes and coding examples:
 
 
-# Python Strings
+# 04 Python Strings
 ---
 
 ## String Length
@@ -614,7 +623,7 @@ print(txt)  # Output: My name is John, I am 36
 - Remember to convert non-strings to strings when combining them with text.
 
 
-# Python Operators
+# 05 Python Operators
 
 This note serves as a reference for Python operators, grouped by type, with explanations and examples to help learners understand their functionality.
 
@@ -724,14 +733,10 @@ Python evaluates expressions based on operator precedence, as follows:
 3. **Unary operators**: `+x`, `-x`, `~x`
 4. **Multiplication, Division, Modulus, Floor Division**: `*`, `/`, `%`, `//`
 5. **Addition and Subtraction**: `+`, `-`
-6. **Bitwise shifts**: `<<`, `>>`
-7. **Bitwise AND**: `&`
-8. **Bitwise XOR**: `^`
-9. **Bitwise OR**: `|`
-10. **Comparisons, Identity, Membership**: `==`, `!=`, `>`, `<`, `>=`, `<=`, `is`, `is not`, `in`, `not in`
-11. **Logical NOT**: `not`
-12. **Logical AND**: `and`
-13. **Logical OR**: `or`
+6. **Comparisons, Identity, Membership**: `==`, `!=`, `>`, `<`, `>=`, `<=`, `is`, `is not`, `in`, `not in`
+7. **Logical NOT**: `not`
+8. **Logical AND**: `and`
+9. **Logical OR**: `or`
 
 **Example:**
 ```python
@@ -740,7 +745,7 @@ print(result)  # Output: 17.0
 ```
 ---
 
-# Python Conditions 
+# 06 Python Conditions 
 
 Python provides a flexible and intuitive way to make decisions using conditional statements. Below is a comprehensive guide, including examples, explanations, and tips.
 
@@ -988,7 +993,7 @@ if b > a:
 
 ---
 
-# Python Loops
+# 07 Python Loops
 
 Python provides two main types of loops for iterating over data or executing a block of code repeatedly:
 
@@ -1174,7 +1179,7 @@ while i < 6:
 ## **Key Differences Between `for` and `while` Loops**
 
 | Feature                | `for` Loop                           | `while` Loop                    |
-|------------------------|---------------------------------------|----------------------------------|
+|------------------------|--------------------------------------|----------------------------------|
 | **Purpose**            | Iterates over sequences or ranges.   | Runs until a condition is false.|
 | **Use Case**           | Known iteration count or sequence.   | Unknown iteration count.        |
 | **Example**            | Iterating over a list or range.      | Looping until a condition is met.|
@@ -1189,3 +1194,9 @@ while i < 6:
 4. Create a program that breaks out of a loop when a randomly generated number is greater than 90.
 
 These notes provide a foundation for understanding and using loops in Python effectively!
+
+---
+
+🎉 CONGRATULATIONS ! 🎉
+
+[week 2 >>](./../week-2/note.md)
