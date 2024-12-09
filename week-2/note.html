@@ -1,0 +1,952 @@
+<!DOCTYPE html><html><head>
+      <title>note</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\Hp\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.15\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<p><img src="./../image//week1.png" alt="logo"></p>
+<h1 id="cataloge">Cataloge </h1>
+<h3 id="01-python-lists01-python-lists">01 <a href="#01-python-lists">python-lists</a> </h3>
+<h3 id="02-python-set02-python-set">02 <a href="#02-python-set">python-set</a> </h3>
+<h3 id="03-python-tuple03-python-tuple">03 <a href="#03-python-tuple">python-tuple</a> </h3>
+<h3 id="04-python-dictionary04-python-dictionary">04 <a href="#04-python-dictionary">python-dictionary</a> </h3>
+<h3 id="05-python-functions05-python-functions">05 <a href="#05-python-functions">python-functions</a> </h3>
+<hr>
+<h1 id="01-python-lists">01 Python Lists </h1>
+<h2 id="introduction"><strong>Introduction</strong> </h2>
+<p>A Python list is an <strong>ordered, mutable collection</strong> that can hold items of various data types. Lists are versatile and widely used in Python for data manipulation.</p>
+<hr>
+<h2 id="1-creating-a-list"><strong>1. Creating a List</strong> </h2>
+<h3 id="syntax">Syntax </h3>
+<p>Use square brackets <code>[]</code> to define a list. Items are separated by commas <code>,</code>.</p>
+<p><strong>Examples</strong></p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Simple list of strings</span>
+pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>
+
+<span class="token comment"># List with mixed data types</span>
+mixed_list <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>mixed_list<span class="token punctuation">)</span>
+</code></pre><h3 id="using-the-list-constructor">Using the <code>list()</code> Constructor </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Creating a list using the constructor</span>
+pets <span class="token operator">=</span> <span class="token builtin">list</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: ['dog', 'cat', 'rabbit']</span>
+</code></pre><hr>
+<h2 id="2-accessing-list-elements"><strong>2. Accessing List Elements</strong> </h2>
+<h3 id="indexing"><strong>Indexing</strong> </h3>
+<p>List indexing starts at <strong>0</strong>. Use indices to access specific elements.</p>
+<p><strong>Examples</strong></p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: dog</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: rabbit</span>
+</code></pre><h3 id="negative-indexing"><strong>Negative Indexing</strong> </h3>
+<p>Negative indices start from <code>-1</code> for the last item.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: rabbit</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: cat</span>
+</code></pre><h3 id="range-of-indexes"><strong>Range of Indexes</strong> </h3>
+<p>Use a colon <code>:</code> to access a range of items.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">,</span> <span class="token string">"fish"</span><span class="token punctuation">,</span> <span class="token string">"hamster"</span><span class="token punctuation">]</span>
+
+<span class="token comment"># From index 1 to 3 (excluding 3)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: ['cat', 'rabbit']</span>
+
+<span class="token comment"># Shortcut examples</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: ['dog', 'cat']  # Start from beginning</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: ['rabbit', 'fish', 'hamster']  # Till the end</span>
+</code></pre><hr>
+<h2 id="3-modifying-lists"><strong>3. Modifying Lists</strong> </h2>
+<h3 id="adding-items"><strong>Adding Items</strong> </h3>
+<h4 id="using-append">Using <code>append()</code> </h4>
+<p>Adds an item to the <strong>end</strong> of the list.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">]</span>
+pets<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">"rabbit"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: ['dog', 'cat', 'rabbit']</span>
+</code></pre><h4 id="using-insert">Using <code>insert()</code> </h4>
+<p>Adds an item at a <strong>specific index</strong>.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"fish"</span><span class="token punctuation">]</span>
+pets<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">)</span>  <span class="token comment"># Insert at index 1</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: ['dog', 'rabbit', 'cat', 'fish']</span>
+</code></pre><h3 id="deleting-items"><strong>Deleting Items</strong> </h3>
+<h4 id="using-pop">Using <code>pop()</code> </h4>
+<p>Removes the last item (default) or an item at a specified index.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">]</span>
+pets<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Remove last item</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: ['dog', 'cat']</span>
+</code></pre><h4 id="using-remove">Using <code>remove()</code> </h4>
+<p>Deletes an item by value.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">]</span>
+pets<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">"cat"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: ['dog', 'rabbit']</span>
+</code></pre><h4 id="using-del-keyword">Using <code>del</code> Keyword </h4>
+<p>Deletes an item by index or clears the list.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-del">del</span> pets<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>  <span class="token comment"># Delete 'cat'</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: ['dog', 'rabbit']</span>
+</code></pre><hr>
+<h2 id="4-other-operations"><strong>4. Other Operations</strong> </h2>
+<h3 id="get-the-length"><strong>Get the Length</strong> </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Output: 3</span>
+</code></pre><h3 id="modify-item"><strong>Modify Item</strong> </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">]</span>
+pets<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">"fish"</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: ['dog', 'cat', 'fish']</span>
+</code></pre><h3 id="check-for-an-item"><strong>Check for an Item</strong> </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"dog"</span> <span class="token keyword keyword-in">in</span> pets<span class="token punctuation">)</span>  <span class="token comment"># Output: True</span>
+</code></pre><h3 id="extend-a-list"><strong>Extend a List</strong> </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>nums1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span>
+nums2 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">6</span><span class="token punctuation">]</span>
+nums1<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>nums2<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>nums1<span class="token punctuation">)</span>  <span class="token comment"># Output: [1, 2, 3, 4, 5, 6]</span>
+</code></pre><hr>
+<h2 id="5-looping-through-a-list"><strong>5. Looping Through a List</strong> </h2>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-for">for</span> pet <span class="token keyword keyword-in">in</span> pets<span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pet<span class="token punctuation">)</span>
+</code></pre><hr>
+<h2 id="6-list-comprehension"><strong>6. List Comprehension</strong> </h2>
+<p>An elegant way to create or modify lists.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Create a list of squares</span>
+squares <span class="token operator">=</span> <span class="token punctuation">[</span>x<span class="token operator">**</span><span class="token number">2</span> <span class="token keyword keyword-for">for</span> x <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>squares<span class="token punctuation">)</span>  <span class="token comment"># Output: [0, 1, 4, 9, 16]</span>
+</code></pre><hr>
+<h2 id="exercises"><strong>Exercises</strong> </h2>
+<h3 id="easy"><strong>Easy</strong> </h3>
+<ol>
+<li>Create a list of five fruit names and print it.</li>
+<li>Access and print the last element in the list <code>["apple", "banana", "cherry"]</code>.</li>
+<li>Add <code>"kiwi"</code> to the list <code>["apple", "banana"]</code> and print the updated list.</li>
+<li>Remove <code>"banana"</code> from the list <code>["apple", "banana", "cherry"]</code>.</li>
+<li>Use a loop to print each item in the list <code>["cat", "dog", "fish"]</code>.</li>
+</ol>
+<h3 id="medium"><strong>Medium</strong> </h3>
+<ol>
+<li>Create a list of numbers from 1 to 10 and print only the even numbers.</li>
+<li>Reverse the list <code>["red", "green", "blue"]</code>.</li>
+<li>Combine the two lists <code>[1, 2, 3]</code> and <code>[4, 5, 6]</code> into one list.</li>
+<li>Modify the list <code>[5, 10, 15]</code> by replacing <code>10</code> with <code>12</code>.</li>
+<li>Find the length of the list <code>["a", "b", "c", "d"]</code> and print it.</li>
+</ol>
+<h3 id="hard"><strong>Hard</strong> </h3>
+<ol>
+<li>Use list comprehension to generate a list of squares for numbers from 1 to 10, excluding numbers divisible by 3.</li>
+<li>Create a nested list (matrix) and print the second row.</li>
+<li>Write a program to find duplicates in a list <code>[1, 2, 3, 2, 4, 5, 1]</code>.</li>
+<li>Sort the list <code>[3, 1, 4, 1, 5, 9]</code> in descending order without using the <code>sort()</code> method.</li>
+<li>Flatten a nested list <code>[[1, 2], [3, 4], [5, 6]]</code> into a single list <code>[1, 2, 3, 4, 5, 6]</code>.</li>
+</ol>
+<hr>
+<hr>
+<h1 id="02-python-set">02 Python Set </h1>
+<h2 id="introduction-to-sets"><strong>Introduction to Sets</strong> </h2>
+<p>A <strong>set</strong> in Python is an <strong>unordered collection of unique items</strong>. Sets are commonly used for storing unique elements, performing set operations, and removing duplicates.</p>
+<h3 id="key-characteristics"><strong>Key Characteristics</strong> </h3>
+<ul>
+<li><strong>Unordered</strong>: Items do not have a fixed position or order.</li>
+<li><strong>Mutable</strong>: You can add or remove items, but the individual items must be immutable (e.g., strings, numbers, tuples).</li>
+<li><strong>Unique</strong>: Duplicate items are automatically removed.</li>
+</ul>
+<hr>
+<h2 id="creating-a-set"><strong>Creating a Set</strong> </h2>
+<p>You can create a set using curly brackets <code>{}</code> or the <code>set()</code> constructor.</p>
+<h3 id="examples"><strong>Examples</strong> </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Using curly brackets</span>
+fruits <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token string">"banana"</span><span class="token punctuation">,</span> <span class="token string">"cherry"</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span>  <span class="token comment"># Output: {'apple', 'banana', 'cherry'}</span>
+
+<span class="token comment"># Using the set() constructor</span>
+colors <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"red"</span><span class="token punctuation">,</span> <span class="token string">"blue"</span><span class="token punctuation">,</span> <span class="token string">"green"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>colors<span class="token punctuation">)</span>  <span class="token comment"># Output: {'red', 'blue', 'green'}</span>
+</code></pre><h3 id="note"><strong>Note</strong> </h3>
+<p>Sets cannot contain mutable types like lists, dictionaries, or other sets. They can, however, include immutable types like strings, numbers, and tuples.</p>
+<hr>
+<h2 id="accessing-items"><strong>Accessing Items</strong> </h2>
+<p>Since sets are unordered, they do not support indexing or slicing. However, you can loop through a set.</p>
+<h3 id="example"><strong>Example</strong> </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-for">for</span> pet <span class="token keyword keyword-in">in</span> pets<span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pet<span class="token punctuation">)</span>
+<span class="token comment"># Output (order may vary):</span>
+<span class="token comment"># dog</span>
+<span class="token comment"># cat</span>
+<span class="token comment"># rabbit</span>
+</code></pre><hr>
+<h2 id="adding-items-to-a-set"><strong>Adding Items to a Set</strong> </h2>
+<p>You can add elements to a set using:</p>
+<ol>
+<li><strong><code>add()</code></strong>: Adds a single item.</li>
+<li><strong><code>update()</code></strong>: Adds multiple items or merges another iterable.</li>
+</ol>
+<h3 id="examples-1"><strong>Examples</strong> </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token comment"># Adding a single item</span>
+pets <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">}</span>
+pets<span class="token punctuation">.</span>add<span class="token punctuation">(</span><span class="token string">"rabbit"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: {'dog', 'cat', 'rabbit'}</span>
+
+<span class="token comment"># Adding multiple items</span>
+pets<span class="token punctuation">.</span>update<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"parrot"</span><span class="token punctuation">,</span> <span class="token string">"fish"</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: {'dog', 'cat', 'rabbit', 'parrot', 'fish'}</span>
+</code></pre><hr>
+<h2 id="removing-items"><strong>Removing Items</strong> </h2>
+<p>Sets allow the removal of elements using:</p>
+<ol>
+<li><strong><code>remove()</code></strong>: Removes an item; raises an error if the item is not found.</li>
+<li><strong><code>discard()</code></strong>: Removes an item; does not raise an error if the item is not found.</li>
+<li><strong><code>pop()</code></strong>: Removes and returns a random item.</li>
+<li><strong><code>clear()</code></strong>: Removes all items from the set.</li>
+</ol>
+<h3 id="examples-2"><strong>Examples</strong> </h3>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">}</span>
+
+<span class="token comment"># Using remove()</span>
+pets<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">"cat"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: {'dog', 'rabbit'}</span>
+
+<span class="token comment"># Using discard()</span>
+pets<span class="token punctuation">.</span>discard<span class="token punctuation">(</span><span class="token string">"rabbit"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: {'dog'}</span>
+
+<span class="token comment"># Using pop()</span>
+pets<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># Removes a random item</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: {}</span>
+
+<span class="token comment"># Clearing the set</span>
+pets <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">}</span>
+pets<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: set()</span>
+</code></pre><hr>
+<h2 id="set-operations"><strong>Set Operations</strong> </h2>
+<p>Sets support various operations for combining, comparing, and modifying sets.</p>
+<h3 id="union"><strong>Union</strong> </h3>
+<p>Combines two sets, removing duplicates. Use the <code>union()</code> method or the <code>|</code> operator.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>x <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">}</span>
+y <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>union<span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Output: {1, 2, 3, 4, 5}</span>
+</code></pre><h3 id="intersection"><strong>Intersection</strong> </h3>
+<p>Finds common items between two sets. Use the <code>intersection()</code> method or the <code>&amp;</code> operator.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>intersection<span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Output: {3}</span>
+</code></pre><h3 id="difference"><strong>Difference</strong> </h3>
+<p>Finds items in one set but not in the other. Use the <code>difference()</code> method or the <code>-</code> operator.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>difference<span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Output: {1, 2}</span>
+</code></pre><h3 id="symmetric-difference"><strong>Symmetric Difference</strong> </h3>
+<p>Finds items that are in either set but not in both. Use the <code>symmetric_difference()</code> method or the <code>^</code> operator.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>x<span class="token punctuation">.</span>symmetric_difference<span class="token punctuation">(</span>y<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Output: {1, 2, 4, 5}</span>
+</code></pre><hr>
+<h2 id="other-useful-methods"><strong>Other Useful Methods</strong> </h2>
+<ul>
+<li><strong><code>issubset()</code></strong>: Checks if one set is a subset of another.</li>
+<li><strong><code>issuperset()</code></strong>: Checks if one set contains another.</li>
+<li><strong><code>isdisjoint()</code></strong>: Checks if two sets have no items in common.</li>
+</ul>
+<hr>
+<h2 id="checking-for-membership"><strong>Checking for Membership</strong> </h2>
+<p>Use the <code>in</code> and <code>not in</code> operators to check if an item exists in a set.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>fruits <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token string">"banana"</span><span class="token punctuation">,</span> <span class="token string">"cherry"</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"apple"</span> <span class="token keyword keyword-in">in</span> fruits<span class="token punctuation">)</span>  <span class="token comment"># Output: True</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"kiwi"</span> <span class="token keyword keyword-not">not</span> <span class="token keyword keyword-in">in</span> fruits<span class="token punctuation">)</span>  <span class="token comment"># Output: True</span>
+</code></pre><hr>
+<h2 id="set-length"><strong>Set Length</strong> </h2>
+<p>Use the <code>len()</code> function to get the number of items in a set.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>fruits <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">"apple"</span><span class="token punctuation">,</span> <span class="token string">"banana"</span><span class="token punctuation">,</span> <span class="token string">"cherry"</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>fruits<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Output: 3</span>
+</code></pre><hr>
+<h2 id="exercises-1"><strong>Exercises</strong> </h2>
+<h3 id="easy-exercises"><strong>Easy Exercises</strong> </h3>
+<ol>
+<li>Create a set of five vegetables and print it.</li>
+<li>Add <code>"mango"</code> to the set <code>{"apple", "banana", "cherry"}</code>.</li>
+<li>Use a loop to print each item in the set <code>{"python", "java", "c++"}</code>.</li>
+<li>Remove <code>"dog"</code> from the set <code>{"dog", "cat", "rabbit"}</code>.</li>
+<li>Check if <code>"cat"</code> is in the set <code>{"dog", "cat", "rabbit"}</code>.</li>
+</ol>
+<hr>
+<h3 id="medium-exercises"><strong>Medium Exercises</strong> </h3>
+<ol>
+<li>Combine the sets <code>{1, 2, 3}</code> and <code>{3, 4, 5}</code> using <code>union()</code>.</li>
+<li>Find the intersection of <code>{1, 2, 3, 4}</code> and <code>{3, 4, 5, 6}</code>.</li>
+<li>Use the <code>difference()</code> method to find items in <code>{1, 2, 3, 4}</code> but not in <code>{3, 4, 5, 6}</code>.</li>
+<li>Create a set of numbers from 1 to 5 and remove all items using <code>clear()</code>.</li>
+<li>Write a program to find duplicates in a list using a set.</li>
+</ol>
+<hr>
+<h3 id="hard-exercises"><strong>Hard Exercises</strong> </h3>
+<ol>
+<li>Use a set to remove duplicate characters from a string.
+<ul>
+<li>Input: <code>"hello"</code></li>
+<li>Output: <code>{'h', 'e', 'l', 'o'}</code></li>
+</ul>
+</li>
+<li>Create two sets of student names and find the symmetric difference.</li>
+<li>Check if the set <code>{1, 2}</code> is a subset of <code>{1, 2, 3}</code>.</li>
+<li>Write a function that takes two sets and returns a new set with all unique elements from both sets.</li>
+<li>Create a program that counts the unique words in a sentence using a set.</li>
+</ol>
+<hr>
+<h1 id="03-python-tuple">03 Python Tuple </h1>
+<p>Tuples in Python are ordered, immutable containers that can hold a collection of items. Tuples are similar to lists but differ in their immutability, meaning their items cannot be modified after creation. This feature makes tuples an excellent choice for storing fixed data that shouldn't change.</p>
+<hr>
+<h3 id="key-characteristics-of-tuples"><strong>Key Characteristics of Tuples</strong> </h3>
+<ol>
+<li><strong>Ordered</strong>: The items in a tuple have a defined order.</li>
+<li><strong>Immutable</strong>: Once created, you cannot change, add, or remove items.</li>
+<li><strong>Supports Mixed Data Types</strong>: Tuples can hold elements of different data types (e.g., strings, integers, booleans).</li>
+</ol>
+<hr>
+<h3 id="creating-a-tuple"><strong>Creating a Tuple</strong> </h3>
+<p>Tuples are created using <strong>round brackets</strong> <code>()</code>. Items are separated by commas.</p>
+<h4 id="example-1">Example: </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: ('dog', 'cat', 'rabbit')</span>
+</code></pre><h4 id="mixed-data-types">Mixed Data Types: </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>mixed <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token number">21</span><span class="token punctuation">,</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>mixed<span class="token punctuation">)</span>  <span class="token comment"># Output: ('dog', 21, True)</span>
+</code></pre><h4 id="using-the-tuple-constructor">Using the <code>tuple()</code> Constructor: </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token builtin">tuple</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Note the double parentheses</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span>  <span class="token comment"># Output: ('dog', 'cat', 'rabbit')</span>
+</code></pre><hr>
+<h3 id="accessing-tuple-items"><strong>Accessing Tuple Items</strong> </h3>
+<p>Tuples support various ways to access their elements using <strong>indexing</strong>, <strong>negative indexing</strong>, and <strong>slicing</strong>.</p>
+<h4 id="indexing-1">Indexing: </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: 'dog'</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: 'rabbit'</span>
+</code></pre><h4 id="negative-indexing-1">Negative Indexing: </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: 'rabbit' (last item)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: 'cat'</span>
+</code></pre><h4 id="slicing">Slicing: </h4>
+<ul>
+<li>Use a colon <code>:</code> to specify a range.</li>
+<li>The start index is inclusive, while the end index is exclusive.</li>
+</ul>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">,</span> <span class="token string">"rabbit"</span><span class="token punctuation">,</span> <span class="token string">"fish"</span><span class="token punctuation">,</span> <span class="token string">"hamster"</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: ('cat', 'rabbit', 'fish')</span>
+</code></pre><h4 id="omitting-start-or-end-index">Omitting Start or End Index: </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: ('dog', 'cat', 'rabbit')</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pets<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># Output: ('rabbit', 'fish', 'hamster')</span>
+</code></pre><hr>
+<h3 id="tuple-operations"><strong>Tuple Operations</strong> </h3>
+<h4 id="getting-the-length">Getting the Length: </h4>
+<p>Use the <code>len()</code> function to determine the number of items in a tuple.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>pets<span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># Output: 5</span>
+</code></pre><h4 id="looping-through-a-tuple">Looping Through a Tuple: </h4>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-for">for</span> pet <span class="token keyword keyword-in">in</span> pets<span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>pet<span class="token punctuation">)</span>
+<span class="token comment"># Output:</span>
+<span class="token comment"># dog</span>
+<span class="token comment"># cat</span>
+<span class="token comment"># rabbit</span>
+<span class="token comment"># fish</span>
+<span class="token comment"># hamster</span>
+</code></pre><h4 id="checking-membership">Checking Membership: </h4>
+<p>Use the <code>in</code> operator to check if an item exists in the tuple.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"cat"</span> <span class="token keyword keyword-in">in</span> pets<span class="token punctuation">)</span>  <span class="token comment"># Output: True</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">"lion"</span> <span class="token keyword keyword-in">in</span> pets<span class="token punctuation">)</span>  <span class="token comment"># Output: False</span>
+</code></pre><h4 id="combining-tuples">Combining Tuples: </h4>
+<p>You can combine two tuples using the <code>+</code> operator.</p>
+<pre data-role="codeBlock" data-info="python" class="language-python python"><code>pets1 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"dog"</span><span class="token punctuation">,</span> <span class="token string">"cat"</span><span class="token punctuation">)</span>
+pets2 <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">"rabbit"</span><span class="token punctuation">,</span> <span class="token string">"fish"</span><span class="token punctuation">)</span>
+all_pets <span class="token operator">=</span> pets1 <span class="token operator">+</span> pets2
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>all_pets<span class="token punctuation">)</span>  <span class="token comment"># Output: ('dog', 'cat', 'rabbit', 'fish')</span>
+</code></pre><hr>
+<h3 id="immutability-of-tuples"><strong>Immutability of Tuples</strong> </h3>
+<p>Since tuples are immutable:</p>
+<ol>
+<li><strong>Items cannot be changed</strong>:<pre data-role="codeBlock" data-info="python" class="language-python python"><code>my_tuple <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span>
+my_tuple<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">10</span>  <span class="token comment"># Raises an error</span>
+</code></pre></li>
+<li><strong>Items cannot be added or removed</strong>:<pre data-role="codeBlock" data-info="python" class="language-python python"><code>my_tuple<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">)</span>  <span class="token comment"># Raises an error</span>
+my_tuple<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span>  <span class="token comment"># Raises an error</span>
+</code></pre></li>
+</ol>
+<hr>
+<h3 id="tuple-exercises"><strong>Tuple Exercises</strong> </h3>
+<h4 id="easy-exercises-1"><strong>Easy Exercises</strong> </h4>
+<ol>
+<li>Create a tuple of five colors and print it.</li>
+<li>Access the second and last item of a tuple.</li>
+<li>Slice the tuple <code>("red", "blue", "green", "yellow", "purple")</code> to get the middle three items.</li>
+<li>Check if <code>"orange"</code> exists in the tuple <code>("red", "blue", "green")</code>.</li>
+<li>Use a loop to print all items in the tuple <code>("apple", "banana", "cherry")</code>.</li>
+</ol>
+<h4 id="medium-exercises-1"><strong>Medium Exercises</strong> </h4>
+<ol>
+<li>Create two tuples and merge them into one.</li>
+<li>Write a program to count how many times a specific item appears in a tuple.</li>
+<li>Extract only the numeric items from a tuple <code>("apple", 42, 3.14, "banana", 7)</code>.</li>
+<li>Find the length of the tuple <code>("a", "b", "c", "d", "e")</code> without using <code>len()</code>.</li>
+<li>Use negative indexing to reverse a tuple.</li>
+</ol>
+<h4 id="hard-exercises-1"><strong>Hard Exercises</strong> </h4>
+<ol>
+<li>Write a function to check if two tuples have at least one common item.</li>
+<li>Convert a tuple of strings to uppercase: <code>("hello", "world") → ("HELLO", "WORLD")</code>.</li>
+<li>Write a program to find the unique elements in two tuples.</li>
+<li>Implement a function that takes a tuple and returns a new tuple with only even numbers.</li>
+<li>Create a tuple of mixed data types and filter out only the string elements.</li>
+</ol>
+<hr>
+<h1 id="04-dictionaries">04 Dictionaries </h1>
+<p>A dictionary is a collection of unordered, modifiable(mutable) paired (key: value) data type.</p>
+<h3 id="creating-a-dictionary">Creating a Dictionary </h3>
+<p>To create a dictionary we use curly brackets, {} or the <em>dict()</em> built-in function.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+empty_dict <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment"># Dictionary with data values</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'first_name'</span><span class="token punctuation">:</span><span class="token string">'Asabeneh'</span><span class="token punctuation">,</span>
+    <span class="token string">'last_name'</span><span class="token punctuation">:</span><span class="token string">'Yetayeh'</span><span class="token punctuation">,</span>
+    <span class="token string">'age'</span><span class="token punctuation">:</span><span class="token number">250</span><span class="token punctuation">,</span>
+    <span class="token string">'country'</span><span class="token punctuation">:</span><span class="token string">'Finland'</span><span class="token punctuation">,</span>
+    <span class="token string">'is_marred'</span><span class="token punctuation">:</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    <span class="token string">'skills'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'JavaScript'</span><span class="token punctuation">,</span> <span class="token string">'React'</span><span class="token punctuation">,</span> <span class="token string">'Node'</span><span class="token punctuation">,</span> <span class="token string">'MongoDB'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'address'</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">'street'</span><span class="token punctuation">:</span><span class="token string">'Space street'</span><span class="token punctuation">,</span>
+        <span class="token string">'zipcode'</span><span class="token punctuation">:</span><span class="token string">'02210'</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+</code></pre><p>The dictionary above shows that a value could be any data types:string, boolean, list, tuple, set or a dictionary.</p>
+<h3 id="dictionary-length">Dictionary Length </h3>
+<p>It checks the number of 'key: value' pairs in the dictionary.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>dct<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 4</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'first_name'</span><span class="token punctuation">:</span><span class="token string">'Asabeneh'</span><span class="token punctuation">,</span>
+    <span class="token string">'last_name'</span><span class="token punctuation">:</span><span class="token string">'Yetayeh'</span><span class="token punctuation">,</span>
+    <span class="token string">'age'</span><span class="token punctuation">:</span><span class="token number">250</span><span class="token punctuation">,</span>
+    <span class="token string">'country'</span><span class="token punctuation">:</span><span class="token string">'Finland'</span><span class="token punctuation">,</span>
+    <span class="token string">'is_married'</span><span class="token punctuation">:</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    <span class="token string">'skills'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'JavaScript'</span><span class="token punctuation">,</span> <span class="token string">'React'</span><span class="token punctuation">,</span> <span class="token string">'Node'</span><span class="token punctuation">,</span> <span class="token string">'MongoDB'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'address'</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">'street'</span><span class="token punctuation">:</span><span class="token string">'Space street'</span><span class="token punctuation">,</span>
+        <span class="token string">'zipcode'</span><span class="token punctuation">:</span><span class="token string">'02210'</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 7</span>
+
+</code></pre><h3 id="accessing-dictionary-items">Accessing Dictionary Items </h3>
+<p>We can access Dictionary items by referring to its key name.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>dct<span class="token punctuation">[</span><span class="token string">'key1'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># value1</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>dct<span class="token punctuation">[</span><span class="token string">'key4'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># value4</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'first_name'</span><span class="token punctuation">:</span><span class="token string">'Asabeneh'</span><span class="token punctuation">,</span>
+    <span class="token string">'last_name'</span><span class="token punctuation">:</span><span class="token string">'Yetayeh'</span><span class="token punctuation">,</span>
+    <span class="token string">'age'</span><span class="token punctuation">:</span><span class="token number">250</span><span class="token punctuation">,</span>
+    <span class="token string">'country'</span><span class="token punctuation">:</span><span class="token string">'Finland'</span><span class="token punctuation">,</span>
+    <span class="token string">'is_marred'</span><span class="token punctuation">:</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    <span class="token string">'skills'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'JavaScript'</span><span class="token punctuation">,</span> <span class="token string">'React'</span><span class="token punctuation">,</span> <span class="token string">'Node'</span><span class="token punctuation">,</span> <span class="token string">'MongoDB'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'address'</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">'street'</span><span class="token punctuation">:</span><span class="token string">'Space street'</span><span class="token punctuation">,</span>
+        <span class="token string">'zipcode'</span><span class="token punctuation">:</span><span class="token string">'02210'</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token string">'first_name'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Asabeneh</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token string">'country'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>    <span class="token comment"># Finland</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token string">'skills'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>     <span class="token comment"># ['JavaScript', 'React', 'Node', 'MongoDB', 'Python']</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token string">'skills'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>  <span class="token comment"># JavaScript</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token string">'address'</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token string">'street'</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token comment"># Space street</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">[</span><span class="token string">'city'</span><span class="token punctuation">]</span><span class="token punctuation">)</span>       <span class="token comment"># Error</span>
+</code></pre><p>Accessing an item by key name raises an error if the key does not exist. To avoid this error first we have to check if a key exist or we can use the <em>get</em> method. The get method returns None, which is a NoneType object data type, if the key does not exist.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'first_name'</span><span class="token punctuation">:</span><span class="token string">'Asabeneh'</span><span class="token punctuation">,</span>
+    <span class="token string">'last_name'</span><span class="token punctuation">:</span><span class="token string">'Yetayeh'</span><span class="token punctuation">,</span>
+    <span class="token string">'age'</span><span class="token punctuation">:</span><span class="token number">250</span><span class="token punctuation">,</span>
+    <span class="token string">'country'</span><span class="token punctuation">:</span><span class="token string">'Finland'</span><span class="token punctuation">,</span>
+    <span class="token string">'is_marred'</span><span class="token punctuation">:</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    <span class="token string">'skills'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'JavaScript'</span><span class="token punctuation">,</span> <span class="token string">'React'</span><span class="token punctuation">,</span> <span class="token string">'Node'</span><span class="token punctuation">,</span> <span class="token string">'MongoDB'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'address'</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">'street'</span><span class="token punctuation">:</span><span class="token string">'Space street'</span><span class="token punctuation">,</span>
+        <span class="token string">'zipcode'</span><span class="token punctuation">:</span><span class="token string">'02210'</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'first_name'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># Asabeneh</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'country'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>    <span class="token comment"># Finland</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'skills'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">#['HTML','CSS','JavaScript', 'React', 'Node', 'MongoDB', 'Python']</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'city'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>   <span class="token comment"># None</span>
+</code></pre><h3 id="adding-items-to-a-dictionary">Adding Items to a Dictionary </h3>
+<p>We can add new key and value pairs to a dictionary</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+dct<span class="token punctuation">[</span><span class="token string">'key5'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'value5'</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'first_name'</span><span class="token punctuation">:</span><span class="token string">'Asabeneh'</span><span class="token punctuation">,</span>
+    <span class="token string">'last_name'</span><span class="token punctuation">:</span><span class="token string">'Yetayeh'</span><span class="token punctuation">,</span>
+    <span class="token string">'age'</span><span class="token punctuation">:</span><span class="token number">250</span><span class="token punctuation">,</span>
+    <span class="token string">'country'</span><span class="token punctuation">:</span><span class="token string">'Finland'</span><span class="token punctuation">,</span>
+    <span class="token string">'is_marred'</span><span class="token punctuation">:</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    <span class="token string">'skills'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'JavaScript'</span><span class="token punctuation">,</span> <span class="token string">'React'</span><span class="token punctuation">,</span> <span class="token string">'Node'</span><span class="token punctuation">,</span> <span class="token string">'MongoDB'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'address'</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">'street'</span><span class="token punctuation">:</span><span class="token string">'Space street'</span><span class="token punctuation">,</span>
+        <span class="token string">'zipcode'</span><span class="token punctuation">:</span><span class="token string">'02210'</span>
+        <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+person<span class="token punctuation">[</span><span class="token string">'job_title'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'Instructor'</span>
+person<span class="token punctuation">[</span><span class="token string">'skills'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'HTML'</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>person<span class="token punctuation">)</span>
+</code></pre><h3 id="modifying-items-in-a-dictionary">Modifying Items in a Dictionary </h3>
+<p>We can modify items in a dictionary</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+dct<span class="token punctuation">[</span><span class="token string">'key1'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'value-one'</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'first_name'</span><span class="token punctuation">:</span><span class="token string">'Asabeneh'</span><span class="token punctuation">,</span>
+    <span class="token string">'last_name'</span><span class="token punctuation">:</span><span class="token string">'Yetayeh'</span><span class="token punctuation">,</span>
+    <span class="token string">'age'</span><span class="token punctuation">:</span><span class="token number">250</span><span class="token punctuation">,</span>
+    <span class="token string">'country'</span><span class="token punctuation">:</span><span class="token string">'Finland'</span><span class="token punctuation">,</span>
+    <span class="token string">'is_marred'</span><span class="token punctuation">:</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    <span class="token string">'skills'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'JavaScript'</span><span class="token punctuation">,</span> <span class="token string">'React'</span><span class="token punctuation">,</span> <span class="token string">'Node'</span><span class="token punctuation">,</span> <span class="token string">'MongoDB'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'address'</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">'street'</span><span class="token punctuation">:</span><span class="token string">'Space street'</span><span class="token punctuation">,</span>
+        <span class="token string">'zipcode'</span><span class="token punctuation">:</span><span class="token string">'02210'</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+person<span class="token punctuation">[</span><span class="token string">'first_name'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'Eyob'</span>
+person<span class="token punctuation">[</span><span class="token string">'age'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">252</span>
+</code></pre><h3 id="checking-keys-in-a-dictionary">Checking Keys in a Dictionary </h3>
+<p>We use the <em>in</em> operator to check if a key exist in a dictionary</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'key2'</span> <span class="token keyword keyword-in">in</span> dct<span class="token punctuation">)</span> <span class="token comment"># True</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'key5'</span> <span class="token keyword keyword-in">in</span> dct<span class="token punctuation">)</span> <span class="token comment"># False</span>
+</code></pre><h3 id="removing-key-and-value-pairs-from-a-dictionary">Removing Key and Value Pairs from a Dictionary </h3>
+<ul>
+<li><em>pop(key)</em>: removes the item with the specified key name:</li>
+<li><em>popitem()</em>: removes the last item</li>
+<li><em>del</em>: removes an item with specified key name</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+dct<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'key1'</span><span class="token punctuation">)</span> <span class="token comment"># removes key1 item</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+dct<span class="token punctuation">.</span>popitem<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># removes the last item</span>
+<span class="token keyword keyword-del">del</span> dct<span class="token punctuation">[</span><span class="token string">'key2'</span><span class="token punctuation">]</span> <span class="token comment"># removes key2 item</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>person <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'first_name'</span><span class="token punctuation">:</span><span class="token string">'Asabeneh'</span><span class="token punctuation">,</span>
+    <span class="token string">'last_name'</span><span class="token punctuation">:</span><span class="token string">'Yetayeh'</span><span class="token punctuation">,</span>
+    <span class="token string">'age'</span><span class="token punctuation">:</span><span class="token number">250</span><span class="token punctuation">,</span>
+    <span class="token string">'country'</span><span class="token punctuation">:</span><span class="token string">'Finland'</span><span class="token punctuation">,</span>
+    <span class="token string">'is_marred'</span><span class="token punctuation">:</span><span class="token boolean">True</span><span class="token punctuation">,</span>
+    <span class="token string">'skills'</span><span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'JavaScript'</span><span class="token punctuation">,</span> <span class="token string">'React'</span><span class="token punctuation">,</span> <span class="token string">'Node'</span><span class="token punctuation">,</span> <span class="token string">'MongoDB'</span><span class="token punctuation">,</span> <span class="token string">'Python'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">'address'</span><span class="token punctuation">:</span><span class="token punctuation">{</span>
+        <span class="token string">'street'</span><span class="token punctuation">:</span><span class="token string">'Space street'</span><span class="token punctuation">,</span>
+        <span class="token string">'zipcode'</span><span class="token punctuation">:</span><span class="token string">'02210'</span>
+    <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+person<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'first_name'</span><span class="token punctuation">)</span>        <span class="token comment"># Removes the firstname item</span>
+person<span class="token punctuation">.</span>popitem<span class="token punctuation">(</span><span class="token punctuation">)</span>                <span class="token comment"># Removes the address item</span>
+<span class="token keyword keyword-del">del</span> person<span class="token punctuation">[</span><span class="token string">'is_married'</span><span class="token punctuation">]</span>        <span class="token comment"># Removes the is_married item</span>
+</code></pre><h3 id="changing-dictionary-to-a-list-of-items">Changing Dictionary to a List of Items </h3>
+<p>The <em>items()</em> method changes dictionary to a list of tuples.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>dct<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># dict_items([('key1', 'value1'), ('key2', 'value2'), ('key3', 'value3'), ('key4', 'value4')])</span>
+</code></pre><h3 id="clearing-a-dictionary">Clearing a Dictionary </h3>
+<p>If we don't want the items in a dictionary we can clear them using <em>clear()</em> method</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>dct<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># None</span>
+</code></pre><h3 id="deleting-a-dictionary">Deleting a Dictionary </h3>
+<p>If we do not use the dictionary we can delete it completely</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+<span class="token keyword keyword-del">del</span> dct
+</code></pre><h3 id="copy-a-dictionary">Copy a Dictionary </h3>
+<p>We can copy a dictionary using a <em>copy()</em> method. Using copy we can avoid mutation of the original dictionary.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+dct_copy <span class="token operator">=</span> dct<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}</span>
+</code></pre><h3 id="getting-dictionary-keys-as-a-list">Getting Dictionary Keys as a List </h3>
+<p>The <em>keys()</em> method gives us all the keys of a a dictionary as a list.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+keys <span class="token operator">=</span> dct<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>keys<span class="token punctuation">)</span>     <span class="token comment"># dict_keys(['key1', 'key2', 'key3', 'key4'])</span>
+</code></pre><h3 id="getting-dictionary-values-as-a-list">Getting Dictionary Values as a List </h3>
+<p>The <em>values</em> method gives us all the values of a a dictionary as a list.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+dct <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token string">'key1'</span><span class="token punctuation">:</span><span class="token string">'value1'</span><span class="token punctuation">,</span> <span class="token string">'key2'</span><span class="token punctuation">:</span><span class="token string">'value2'</span><span class="token punctuation">,</span> <span class="token string">'key3'</span><span class="token punctuation">:</span><span class="token string">'value3'</span><span class="token punctuation">,</span> <span class="token string">'key4'</span><span class="token punctuation">:</span><span class="token string">'value4'</span><span class="token punctuation">}</span>
+values <span class="token operator">=</span> dct<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>values<span class="token punctuation">)</span>     <span class="token comment"># dict_values(['value1', 'value2', 'value3', 'value4'])</span>
+</code></pre><p>🌕 You are astonishing. Now, you are super charged with the power of dictionaries. You have just completed day 8 challenges and you are 8 steps a head in to your way to greatness. Now do some exercises for your brain and  muscles.</p>
+<h2 id="-exercises-day-8">💻 Exercises: Day 8 </h2>
+<ol>
+<li>Create  an empty dictionary called dog</li>
+<li>Add name, color, breed, legs, age to the dog dictionary</li>
+<li>Create a student dictionary and add first_name, last_name, gender, age, marital status, skills, country, city and address as keys for the dictionary</li>
+<li>Get the length of the student dictionary</li>
+<li>Get the value of skills and check the data type, it should be a list</li>
+<li>Modify the skills values by adding one or two skills</li>
+<li>Get the dictionary keys as a list</li>
+<li>Get the dictionary values as a list</li>
+<li>Change the dictionary to a list of tuples using <em>items()</em> method</li>
+<li>Delete one of the items in the dictionary</li>
+<li>Delete one of the dictionaries</li>
+</ol>
+<hr>
+<h1 id="05-functions">05 Functions </h1>
+<p>So far we have seen many built-in Python functions. In this section, we will focus on custom functions. What is a function? Before we start making functions, let us learn what a function is and why we need them?</p>
+<h3 id="defining-a-function">Defining a Function </h3>
+<p>A function is a reusable block of code or programming statements designed to perform a certain task. To define or declare a function, Python provides the <em>def</em> keyword. The following is the syntax for defining a function. The function block of code is executed only if the function is called or invoked.</p>
+<h3 id="declaring-and-calling-a-function">Declaring and Calling a Function </h3>
+<p>When we make a function, we call it declaring a function. When we start using the it,  we call it <em>calling</em> or <em>invoking</em> a function. Function can be declared with or without parameters.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+<span class="token comment"># Declaring a function</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    codes
+    codes
+<span class="token comment"># Calling a function</span>
+function_name<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><h3 id="function-without-parameters">Function without Parameters </h3>
+<p>Function can be declared without parameters.</p>
+<p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">generate_full_name</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    first_name <span class="token operator">=</span> <span class="token string">'Asabeneh'</span>
+    last_name <span class="token operator">=</span> <span class="token string">'Yetayeh'</span>
+    space <span class="token operator">=</span> <span class="token string">' '</span>
+    full_name <span class="token operator">=</span> first_name <span class="token operator">+</span> space <span class="token operator">+</span> last_name
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>full_name<span class="token punctuation">)</span>
+generate_full_name <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment"># calling a function</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">add_two_numbers</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    num_one <span class="token operator">=</span> <span class="token number">2</span>
+    num_two <span class="token operator">=</span> <span class="token number">3</span>
+    total <span class="token operator">=</span> num_one <span class="token operator">+</span> num_two
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>total<span class="token punctuation">)</span>
+add_two_numbers<span class="token punctuation">(</span><span class="token punctuation">)</span>
+</code></pre><h3 id="function-returning-a-value---part-1">Function Returning a Value - Part 1 </h3>
+<p>Function can also return values, if a function does not have a return statement, the value of the function is None. Let us rewrite the above functions using return. From now on, we get a value from a function when we call the function and print it.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">generate_full_name</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    first_name <span class="token operator">=</span> <span class="token string">'Asabeneh'</span>
+    last_name <span class="token operator">=</span> <span class="token string">'Yetayeh'</span>
+    space <span class="token operator">=</span> <span class="token string">' '</span>
+    full_name <span class="token operator">=</span> first_name <span class="token operator">+</span> space <span class="token operator">+</span> last_name
+    <span class="token keyword keyword-return">return</span> full_name
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>generate_full_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">add_two_numbers</span> <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    num_one <span class="token operator">=</span> <span class="token number">2</span>
+    num_two <span class="token operator">=</span> <span class="token number">3</span>
+    total <span class="token operator">=</span> num_one <span class="token operator">+</span> num_two
+    <span class="token keyword keyword-return">return</span> total
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>add_two_numbers<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h3 id="function-with-parameters">Function with Parameters </h3>
+<p>In a function we can pass different data types(number, string, boolean, list, tuple, dictionary or set) as a parameter</p>
+<ul>
+<li>Single Parameter: If our function takes a parameter we should call our function with an argument</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>  <span class="token comment"># syntax</span>
+  <span class="token comment"># Declaring a function</span>
+  <span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>parameter<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    codes
+    codes
+  <span class="token comment"># Calling function</span>
+  <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>function_name<span class="token punctuation">(</span>argument<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">greetings</span> <span class="token punctuation">(</span>name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    message <span class="token operator">=</span> name <span class="token operator">+</span> <span class="token string">', welcome to Python for Everyone!'</span>
+    <span class="token keyword keyword-return">return</span> message
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>greetings<span class="token punctuation">(</span><span class="token string">'Asabeneh'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">add_ten</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    ten <span class="token operator">=</span> <span class="token number">10</span>
+    <span class="token keyword keyword-return">return</span> num <span class="token operator">+</span> ten
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>add_ten<span class="token punctuation">(</span><span class="token number">90</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">square_number</span><span class="token punctuation">(</span>x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> x <span class="token operator">*</span> x
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>square_number<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">area_of_circle</span> <span class="token punctuation">(</span>r<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    PI <span class="token operator">=</span> <span class="token number">3.14</span>
+    area <span class="token operator">=</span> PI <span class="token operator">*</span> r <span class="token operator">**</span> <span class="token number">2</span>
+    <span class="token keyword keyword-return">return</span> area
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>area_of_circle<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">sum_of_numbers</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    total <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        total<span class="token operator">+=</span>i
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>total<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>sum_of_numbers<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 55</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>sum_of_numbers<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 5050</span>
+</code></pre><ul>
+<li>Two Parameter: A function may or may not have a parameter or parameters. A function may also have two or more parameters. If our function takes parameters we should call it with arguments. Let us check a function with two parameters:</li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>  <span class="token comment"># syntax</span>
+  <span class="token comment"># Declaring a function</span>
+  <span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>para1<span class="token punctuation">,</span> para2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    codes
+    codes
+  <span class="token comment"># Calling function</span>
+  <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>function_name<span class="token punctuation">(</span>arg1<span class="token punctuation">,</span> arg2<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">generate_full_name</span> <span class="token punctuation">(</span>first_name<span class="token punctuation">,</span> last_name<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    space <span class="token operator">=</span> <span class="token string">' '</span>
+      full_name <span class="token operator">=</span> first_name <span class="token operator">+</span> space <span class="token operator">+</span> last_name
+      <span class="token keyword keyword-return">return</span> full_name
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'Full Name: '</span><span class="token punctuation">,</span> generate_full_name<span class="token punctuation">(</span><span class="token string">'Asabeneh'</span><span class="token punctuation">,</span><span class="token string">'Yetayeh'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">sum_two_numbers</span> <span class="token punctuation">(</span>num_one<span class="token punctuation">,</span> num_two<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token builtin">sum</span> <span class="token operator">=</span> num_one <span class="token operator">+</span> num_two
+    <span class="token keyword keyword-return">return</span> <span class="token builtin">sum</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'Sum of two numbers: '</span><span class="token punctuation">,</span> sum_two_numbers<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">calculate_age</span> <span class="token punctuation">(</span>current_year<span class="token punctuation">,</span> birth_year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    age <span class="token operator">=</span> current_year <span class="token operator">-</span> birth_year
+    <span class="token keyword keyword-return">return</span> age<span class="token punctuation">;</span>
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'Age: '</span><span class="token punctuation">,</span> calculate_age<span class="token punctuation">(</span><span class="token number">2021</span><span class="token punctuation">,</span> <span class="token number">1819</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">weight_of_object</span> <span class="token punctuation">(</span>mass<span class="token punctuation">,</span> gravity<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    weight <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>mass <span class="token operator">*</span> gravity<span class="token punctuation">)</span><span class="token operator">+</span> <span class="token string">' N'</span> <span class="token comment"># the value has to be changed to a string first</span>
+    <span class="token keyword keyword-return">return</span> weight
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'Weight of an object in Newtons: '</span><span class="token punctuation">,</span> weight_of_object<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">9.81</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h3 id="passing-arguments-with-key-and-value">Passing Arguments with Key and Value </h3>
+<p>If we pass the arguments with key and value, the order of the arguments does not matter.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+<span class="token comment"># Declaring a function</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>para1<span class="token punctuation">,</span> para2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    codes
+    codes
+<span class="token comment"># Calling function</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>function_name<span class="token punctuation">(</span>para1 <span class="token operator">=</span> <span class="token string">'John'</span><span class="token punctuation">,</span> para2 <span class="token operator">=</span> <span class="token string">'Doe'</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># the order of arguments does not matter here</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">print_fullname</span><span class="token punctuation">(</span>firstname<span class="token punctuation">,</span> lastname<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    space <span class="token operator">=</span> <span class="token string">' '</span>
+    full_name <span class="token operator">=</span> firstname  <span class="token operator">+</span> space <span class="token operator">+</span> lastname
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>full_name<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>print_fullname<span class="token punctuation">(</span>firstname <span class="token operator">=</span> <span class="token string">'Asabeneh'</span><span class="token punctuation">,</span> lastname <span class="token operator">=</span> <span class="token string">'Yetayeh'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">add_two_numbers</span> <span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    total <span class="token operator">=</span> num1 <span class="token operator">+</span> num2
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>total<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>add_two_numbers<span class="token punctuation">(</span>num2 <span class="token operator">=</span> <span class="token number">3</span><span class="token punctuation">,</span> num1 <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># Order does not matter</span>
+</code></pre><h3 id="function-returning-a-value---part-2">Function Returning a Value - Part 2 </h3>
+<p>If we do not return a value with a function, then our function is returning <em>None</em> by default. To return a value with a function we use the keyword <em>return</em> followed by the variable we are returning. We can return any kind of data types from a function.</p>
+<ul>
+<li>Returning a string:<br>
+<strong>Example:</strong></li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">print_name</span><span class="token punctuation">(</span>firstname<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> firstname
+print_name<span class="token punctuation">(</span><span class="token string">'Asabeneh'</span><span class="token punctuation">)</span> <span class="token comment"># Asabeneh</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">print_full_name</span><span class="token punctuation">(</span>firstname<span class="token punctuation">,</span> lastname<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    space <span class="token operator">=</span> <span class="token string">' '</span>
+    full_name <span class="token operator">=</span> firstname  <span class="token operator">+</span> space <span class="token operator">+</span> lastname
+    <span class="token keyword keyword-return">return</span> full_name
+print_full_name<span class="token punctuation">(</span>firstname<span class="token operator">=</span><span class="token string">'Asabeneh'</span><span class="token punctuation">,</span> lastname<span class="token operator">=</span><span class="token string">'Yetayeh'</span><span class="token punctuation">)</span>
+</code></pre><ul>
+<li>Returning a number:</li>
+</ul>
+<p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">add_two_numbers</span> <span class="token punctuation">(</span>num1<span class="token punctuation">,</span> num2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    total <span class="token operator">=</span> num1 <span class="token operator">+</span> num2
+    <span class="token keyword keyword-return">return</span> total
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>add_two_numbers<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">calculate_age</span> <span class="token punctuation">(</span>current_year<span class="token punctuation">,</span> birth_year<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    age <span class="token operator">=</span> current_year <span class="token operator">-</span> birth_year
+    <span class="token keyword keyword-return">return</span> age<span class="token punctuation">;</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'Age: '</span><span class="token punctuation">,</span> calculate_age<span class="token punctuation">(</span><span class="token number">2019</span><span class="token punctuation">,</span> <span class="token number">1819</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><ul>
+<li>Returning a boolean:<br>
+<strong>Example:</strong></li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">is_even</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-if">if</span> n <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'even'</span><span class="token punctuation">)</span>
+        <span class="token keyword keyword-return">return</span> <span class="token boolean">True</span>    <span class="token comment"># return stops further execution of the function, similar to break </span>
+    <span class="token keyword keyword-return">return</span> <span class="token boolean">False</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>is_even<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># True</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>is_even<span class="token punctuation">(</span><span class="token number">7</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># False</span>
+</code></pre><ul>
+<li>Returning a list:<br>
+<strong>Example:</strong></li>
+</ul>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">find_even_numbers</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    evens <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword keyword-if">if</span> i <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            evens<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+    <span class="token keyword keyword-return">return</span> evens
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>find_even_numbers<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h3 id="function-with-default-parameters">Function with Default Parameters </h3>
+<p>Sometimes we pass default values to parameters, when we invoke the function. If we do not pass arguments when calling the function, their default values will be used.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+<span class="token comment"># Declaring a function</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>param <span class="token operator">=</span> value<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    codes
+    codes
+<span class="token comment"># Calling function</span>
+function_name<span class="token punctuation">(</span><span class="token punctuation">)</span>
+function_name<span class="token punctuation">(</span>arg<span class="token punctuation">)</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">greetings</span> <span class="token punctuation">(</span>name <span class="token operator">=</span> <span class="token string">'Peter'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    message <span class="token operator">=</span> name <span class="token operator">+</span> <span class="token string">', welcome to Python for Everyone!'</span>
+    <span class="token keyword keyword-return">return</span> message
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>greetings<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>greetings<span class="token punctuation">(</span><span class="token string">'Asabeneh'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">generate_full_name</span> <span class="token punctuation">(</span>first_name <span class="token operator">=</span> <span class="token string">'Asabeneh'</span><span class="token punctuation">,</span> last_name <span class="token operator">=</span> <span class="token string">'Yetayeh'</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    space <span class="token operator">=</span> <span class="token string">' '</span>
+    full_name <span class="token operator">=</span> first_name <span class="token operator">+</span> space <span class="token operator">+</span> last_name
+    <span class="token keyword keyword-return">return</span> full_name
+
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>generate_full_name<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>generate_full_name<span class="token punctuation">(</span><span class="token string">'David'</span><span class="token punctuation">,</span><span class="token string">'Smith'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">calculate_age</span> <span class="token punctuation">(</span>birth_year<span class="token punctuation">,</span>current_year <span class="token operator">=</span> <span class="token number">2021</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    age <span class="token operator">=</span> current_year <span class="token operator">-</span> birth_year
+    <span class="token keyword keyword-return">return</span> age<span class="token punctuation">;</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'Age: '</span><span class="token punctuation">,</span> calculate_age<span class="token punctuation">(</span><span class="token number">1821</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token keyword keyword-def">def</span> <span class="token function">weight_of_object</span> <span class="token punctuation">(</span>mass<span class="token punctuation">,</span> gravity <span class="token operator">=</span> <span class="token number">9.81</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    weight <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>mass <span class="token operator">*</span> gravity<span class="token punctuation">)</span><span class="token operator">+</span> <span class="token string">' N'</span> <span class="token comment"># the value has to be changed to string first</span>
+    <span class="token keyword keyword-return">return</span> weight
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'Weight of an object in Newtons: '</span><span class="token punctuation">,</span> weight_of_object<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 9.81 - average gravity on Earth's surface</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span><span class="token string">'Weight of an object in Newtons: '</span><span class="token punctuation">,</span> weight_of_object<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">,</span> <span class="token number">1.62</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># gravity on the surface of the Moon</span>
+</code></pre><h3 id="arbitrary-number-of-arguments">Arbitrary Number of Arguments </h3>
+<p>If we do not know the number of arguments we pass to our function, we can create a function which can take arbitrary number of arguments by adding * before the parameter name.</p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment"># syntax</span>
+<span class="token comment"># Declaring a function</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span><span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    codes
+    codes
+<span class="token comment"># Calling function</span>
+function_name<span class="token punctuation">(</span>param1<span class="token punctuation">,</span> param2<span class="token punctuation">,</span> param3<span class="token punctuation">,</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">)</span>
+</code></pre><p><strong>Example:</strong></p>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">sum_all_nums</span><span class="token punctuation">(</span><span class="token operator">*</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    total <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword keyword-for">for</span> num <span class="token keyword keyword-in">in</span> nums<span class="token punctuation">:</span>
+        total <span class="token operator">+=</span> num     <span class="token comment"># same as total = total + num </span>
+    <span class="token keyword keyword-return">return</span> total
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>sum_all_nums<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 10</span>
+</code></pre><h3 id="default-and-arbitrary-number-of-parameters-in-functions">Default and Arbitrary Number of Parameters in Functions </h3>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-def">def</span> <span class="token function">generate_groups</span> <span class="token punctuation">(</span>team<span class="token punctuation">,</span><span class="token operator">*</span>args<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>team<span class="token punctuation">)</span>
+    <span class="token keyword keyword-for">for</span> i <span class="token keyword keyword-in">in</span> args<span class="token punctuation">:</span>
+        <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>generate_groups<span class="token punctuation">(</span><span class="token string">'Team-1'</span><span class="token punctuation">,</span><span class="token string">'Asabeneh'</span><span class="token punctuation">,</span><span class="token string">'Brook'</span><span class="token punctuation">,</span><span class="token string">'David'</span><span class="token punctuation">,</span><span class="token string">'Eyob'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre><h3 id="function-as-a-parameter-of-another-function">Function as a Parameter of Another Function </h3>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token comment">#You can pass functions around as parameters</span>
+<span class="token keyword keyword-def">def</span> <span class="token function">square_number</span> <span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> n <span class="token operator">*</span> n
+<span class="token keyword keyword-def">def</span> <span class="token function">do_something</span><span class="token punctuation">(</span>f<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword keyword-return">return</span> f<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>do_something<span class="token punctuation">(</span>square_number<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 27</span>
+</code></pre><p>🌕 You achieved quite a lot so far.  Keep going! You have just completed day 11 challenges and you are 11 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.</p>
+<h2 id="-exercises-day-11">💻 Exercises: Day 11 </h2>
+<h3 id="exercises-level-1">Exercises: Level 1 </h3>
+<ol>
+<li>Declare a function <em>add_two_numbers</em>. It takes two parameters and it returns a sum.</li>
+<li>Area of a circle is calculated as follows: area = π x r x r. Write a function that calculates <em>area_of_circle</em>.</li>
+<li>Write a function called add_all_nums which takes arbitrary number of arguments and sums all the arguments. Check if all the list items are number types. If not do give a reasonable feedback.</li>
+<li>Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. Write a function which converts °C to °F, <em>convert_celsius_to-fahrenheit</em>.</li>
+<li>Write a function called check-season, it takes a month parameter and returns the season: Autumn, Winter, Spring or Summer.</li>
+<li>Write a function called calculate_slope which return the slope of a linear equation</li>
+<li>Quadratic equation is calculated as follows: ax² + bx + c = 0. Write a function which calculates solution set of a quadratic equation, <em>solve_quadratic_eqn</em>.</li>
+<li>Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.</li>
+<li>Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).</li>
+</ol>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>reverse_list<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># [5, 4, 3, 2, 1]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>reverse_list1<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">"A"</span><span class="token punctuation">,</span> <span class="token string">"B"</span><span class="token punctuation">,</span> <span class="token string">"C"</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token comment"># ["C", "B", "A"]</span>
+</code></pre><ol start="10">
+<li>Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items</li>
+<li>Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.</li>
+</ol>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>food_staff <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Potato'</span><span class="token punctuation">,</span> <span class="token string">'Tomato'</span><span class="token punctuation">,</span> <span class="token string">'Mango'</span><span class="token punctuation">,</span> <span class="token string">'Milk'</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>add_item<span class="token punctuation">(</span>food_staff<span class="token punctuation">,</span> <span class="token string">'Meat'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token comment"># ['Potato', 'Tomato', 'Mango', 'Milk','Meat']</span>
+numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>add_item<span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>      <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span>
+</code></pre><ol start="12">
+<li>Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.</li>
+</ol>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>food_staff <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Potato'</span><span class="token punctuation">,</span> <span class="token string">'Tomato'</span><span class="token punctuation">,</span> <span class="token string">'Mango'</span><span class="token punctuation">,</span> <span class="token string">'Milk'</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>remove_item<span class="token punctuation">(</span>food_staff<span class="token punctuation">,</span> <span class="token string">'Mango'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># ['Potato', 'Tomato', 'Milk'];</span>
+numbers <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>remove_item<span class="token punctuation">(</span>numbers<span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># [2, 7, 9]</span>
+</code></pre><ol start="13">
+<li>Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.</li>
+</ol>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code><span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>sum_of_numbers<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment"># 15</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>sum_of_numbers<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 55</span>
+<span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>sum_of_numbers<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 5050</span>
+</code></pre><ol start="14">
+<li>Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.</li>
+<li>Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.</li>
+</ol>
+<h3 id="exercises-level-2">Exercises: Level 2 </h3>
+<ol>
+<li>Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.</li>
+</ol>
+<pre data-role="codeBlock" data-info="py" class="language-python py"><code>    <span class="token keyword keyword-print">print</span><span class="token punctuation">(</span>evens_and_odds<span class="token punctuation">(</span><span class="token number">100</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token comment"># The number of odds are 50.</span>
+    <span class="token comment"># The number of evens are 51.</span>
+</code></pre><ol>
+<li>Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number</li>
+<li>Call your function <em>is_empty</em>, it takes a parameter and it checks if it is empty or not</li>
+<li>Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).</li>
+</ol>
+<h3 id="exercises-level-3">Exercises: Level 3 </h3>
+<ol>
+<li>Write a function called is_prime, which checks if a number is prime.</li>
+<li>Write a functions which checks if all items are unique in the list.</li>
+<li>Write a function which checks if all the items of the list are of the same data type.</li>
+<li>Write a function which check if provided variable is a valid python variable</li>
+<li>Go to the data folder and access the <a href="http://countries-data.py">countries-data.py</a> file.</li>
+</ol>
+<ul>
+<li>Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order</li>
+<li>Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order.</li>
+</ul>
+<hr>
+<p>🎉 CONGRATULATIONS ! 🎉</p>
+<p><a href="./../Week-3/OOP.md">week 3 &gt;&gt;</a></p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

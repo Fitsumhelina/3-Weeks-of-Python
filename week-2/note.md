@@ -385,7 +385,6 @@ print(len(fruits))  # Output: 3
 
 ---
 
-
 # 03 Python Tuple
 
 Tuples in Python are ordered, immutable containers that can hold a collection of items. Tuples are similar to lists but differ in their immutability, meaning their items cannot be modified after creation. This feature makes tuples an excellent choice for storing fixed data that shouldn't change.
@@ -533,381 +532,719 @@ Since tuples are immutable:
 
 ---
 
-# 04 Python Dictionary  
+# 04 Dictionaries
 
-A dictionary is an unordered and mutable collection of items.  
-A dictionary is written with curly brackets `{}`.  
-Each item in a dictionary contains a **key/value** pair.  
+A dictionary is a collection of unordered, modifiable(mutable) paired (key: value) data type.
 
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-print(person)
+### Creating a Dictionary
+
+To create a dictionary we use curly brackets, {} or the *dict()* built-in function.
+
+```py
+# syntax
+empty_dict = {}
+# Dictionary with data values
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
 ```
 
-### Explanation  
+**Example:**
 
-In the example above, we have 3 items:  
-1. The first item has a key name of `"first_name"` and its value is `"John"`.  
-2. The second item has a key name of `"last_name"` and its value is `"Doe"`.  
-3. The third item has a key name of `"age"` and its value is `30`.  
-
----
-
-### Accessing Items  
-
-To access an item, specify the key name of an item inside square brackets `[]`.  
-
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-x = person["first_name"]
-y = person["last_name"]
-z = person["age"]
-print("First Name:", x)
-print("Last Name:", y)
-print("Age:", z)
-```
-
----
-
-### Handling Non-Existing Keys  
-
-If you try to access a key that does not exist, an error will be raised:  
-
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-print(person["hobby"])  # KeyError
-```
-
-#### Use `get()` to Avoid Errors  
-
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-print(person.get("hobby"))  # None
-```
-
----
-
-### Adding Items  
-
-To add new items, specify a new key name inside square brackets and assign a value:  
-
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-person["hobby"] = "playing basketball"
-print(person)
-```
-
----
-
-### Changing an Item's Value  
-
-To modify an item's value, refer to its key name and assign a new value:  
-
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-person["first_name"] = "Jane"
-print(person)
-```
-
----
-
-### Removing Items  
-
-#### Using `pop()`  
-
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-person.pop("age")
-print(person)
-```
-
-#### Using `del`  
-
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-del person["age"]
-print(person)
-```
-
----
-
-### Getting the Length of a Dictionary  
-
-Use the `len()` method to get the number of items in a dictionary:  
-
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-print(len(person))  # 3
-```
-
----
-
-### Checking if a Key Exists  
-
-To check if a key exists, use the `in` operator with an `if` statement:  
-
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-if "age" in person:
-    print('The "age" key exists')
-```
-
----
-
-### Looping Through a Dictionary  
-
-The `for` loop returns each key in the dictionary:  
-
-```python
-person = { "first_name": "John", "last_name": "Doe", "age": 30 }
-for key in person:
-    print(key, ":", person[key])
-```
-
----
-
-### Nested Dictionary  
-
-A dictionary can contain another dictionary:  
-
-```python
-employees = {
-    "manager": {
-        "name": "Jane Doe",
-        "age": 29
-    },
-    "programmer": {
-        "name": "John Doe",
-        "age": 30
+```py
+person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
     }
-}
-print(employees)
-```
-
-#### Accessing Nested Dictionary Items  
-
-```python
-employees = {
-    "manager": {
-        "name": "Jane Doe",
-        "age": 29
-    },
-    "programmer": {
-        "name": "John Doe",
-        "age": 30
     }
+```
+
+The dictionary above shows that a value could be any data types:string, boolean, list, tuple, set or a dictionary.
+
+### Dictionary Length
+
+It checks the number of 'key: value' pairs in the dictionary.
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+print(len(dct)) # 4
+```
+
+**Example:**
+
+```py
+person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_married':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+print(len(person)) # 7
+
+```
+
+### Accessing Dictionary Items
+
+We can access Dictionary items by referring to its key name.
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+print(dct['key1']) # value1
+print(dct['key4']) # value4
+```
+
+**Example:**
+
+```py
+person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+print(person['first_name']) # Asabeneh
+print(person['country'])    # Finland
+print(person['skills'])     # ['JavaScript', 'React', 'Node', 'MongoDB', 'Python']
+print(person['skills'][0])  # JavaScript
+print(person['address']['street']) # Space street
+print(person['city'])       # Error
+```
+
+Accessing an item by key name raises an error if the key does not exist. To avoid this error first we have to check if a key exist or we can use the _get_ method. The get method returns None, which is a NoneType object data type, if the key does not exist.
+```py
+person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+print(person.get('first_name')) # Asabeneh
+print(person.get('country'))    # Finland
+print(person.get('skills')) #['HTML','CSS','JavaScript', 'React', 'Node', 'MongoDB', 'Python']
+print(person.get('city'))   # None
+```
+
+### Adding Items to a Dictionary
+
+We can add new key and value pairs to a dictionary
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+dct['key5'] = 'value5'
+```
+
+**Example:**
+
+```py
+person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+        }
 }
-print(employees["manager"]["name"])  # Jane Doe
-print(employees["programmer"]["name"])  # John Doe
+person['job_title'] = 'Instructor'
+person['skills'].append('HTML')
+print(person)
 ```
+
+### Modifying Items in a Dictionary
+
+We can modify items in a dictionary
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+dct['key1'] = 'value-one'
+```
+
+**Example:**
+
+```py
+person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+person['first_name'] = 'Eyob'
+person['age'] = 252
+```
+
+### Checking Keys in a Dictionary
+
+We use the _in_ operator to check if a key exist in a dictionary
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+print('key2' in dct) # True
+print('key5' in dct) # False
+```
+
+### Removing Key and Value Pairs from a Dictionary
+
+- _pop(key)_: removes the item with the specified key name:
+- _popitem()_: removes the last item
+- _del_: removes an item with specified key name
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+dct.pop('key1') # removes key1 item
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+dct.popitem() # removes the last item
+del dct['key2'] # removes key2 item
+```
+
+**Example:**
+
+```py
+person = {
+    'first_name':'Asabeneh',
+    'last_name':'Yetayeh',
+    'age':250,
+    'country':'Finland',
+    'is_marred':True,
+    'skills':['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address':{
+        'street':'Space street',
+        'zipcode':'02210'
+    }
+    }
+person.pop('first_name')        # Removes the firstname item
+person.popitem()                # Removes the address item
+del person['is_married']        # Removes the is_married item
+```
+
+### Changing Dictionary to a List of Items
+
+The _items()_ method changes dictionary to a list of tuples.
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+print(dct.items()) # dict_items([('key1', 'value1'), ('key2', 'value2'), ('key3', 'value3'), ('key4', 'value4')])
+```
+
+### Clearing a Dictionary
+
+If we don't want the items in a dictionary we can clear them using _clear()_ method
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+print(dct.clear()) # None
+```
+
+### Deleting a Dictionary
+
+If we do not use the dictionary we can delete it completely
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+del dct
+```
+
+### Copy a Dictionary
+
+We can copy a dictionary using a _copy()_ method. Using copy we can avoid mutation of the original dictionary.
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+dct_copy = dct.copy() # {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+```
+
+### Getting Dictionary Keys as a List
+
+The _keys()_ method gives us all the keys of a a dictionary as a list.
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+keys = dct.keys()
+print(keys)     # dict_keys(['key1', 'key2', 'key3', 'key4'])
+```
+
+### Getting Dictionary Values as a List
+
+The _values_ method gives us all the values of a a dictionary as a list.
+
+```py
+# syntax
+dct = {'key1':'value1', 'key2':'value2', 'key3':'value3', 'key4':'value4'}
+values = dct.values()
+print(values)     # dict_values(['value1', 'value2', 'value3', 'value4'])
+```
+
+🌕 You are astonishing. Now, you are super charged with the power of dictionaries. You have just completed day 8 challenges and you are 8 steps a head in to your way to greatness. Now do some exercises for your brain and  muscles.
+
+## 💻 Exercises: Day 8
+
+1. Create  an empty dictionary called dog
+2. Add name, color, breed, legs, age to the dog dictionary
+3. Create a student dictionary and add first_name, last_name, gender, age, marital status, skills, country, city and address as keys for the dictionary
+4. Get the length of the student dictionary
+5. Get the value of skills and check the data type, it should be a list
+6. Modify the skills values by adding one or two skills
+7. Get the dictionary keys as a list
+8. Get the dictionary values as a list
+9. Change the dictionary to a list of tuples using _items()_ method
+10. Delete one of the items in the dictionary
+11. Delete one of the dictionaries
 
 ---
 
-### Exercises  
+# 05 Functions
 
-**Exercise 1:** Create a `person` dictionary with "first_name" and "last_name" items:  
-```python
-person = { "first_name": "John", "last_name": "Doe" }
+So far we have seen many built-in Python functions. In this section, we will focus on custom functions. What is a function? Before we start making functions, let us learn what a function is and why we need them?
+
+### Defining a Function
+
+A function is a reusable block of code or programming statements designed to perform a certain task. To define or declare a function, Python provides the _def_ keyword. The following is the syntax for defining a function. The function block of code is executed only if the function is called or invoked.
+
+### Declaring and Calling a Function
+
+When we make a function, we call it declaring a function. When we start using the it,  we call it _calling_ or _invoking_ a function. Function can be declared with or without parameters.
+
+```py
+# syntax
+# Declaring a function
+def function_name():
+    codes
+    codes
+# Calling a function
+function_name()
 ```
 
-**Exercise 2:** Print the `"last_name"` item from the `person` dictionary:  
-```python
-person = { "first_name": "John", "last_name": "Doe" }
-print(person["last_name"])
-```
----
+### Function without Parameters
 
-# 05 Python Functions
+Function can be declared without parameters.
 
-## **Introduction to Functions**
-A **function** is a group of statements designed to perform a specific task. Functions make your code modular, reusable, and easier to debug.
+**Example:**
 
-### Example of a Basic Function:
-```python
-def my_func():
-    x = "Hello World!"  # Task performed by the function
-    print(x)
+```py
+def generate_full_name ():
+    first_name = 'Asabeneh'
+    last_name = 'Yetayeh'
+    space = ' '
+    full_name = first_name + space + last_name
+    print(full_name)
+generate_full_name () # calling a function
 
-# Calling the function
-my_func()
-```
-
----
-
-## **Creating a Function**
-To define a function in Python:
-1. Use the `def` keyword.
-2. Provide a **function name**.
-3. Use **round brackets `()`** followed by a **colon `:`**.
-4. Write a **function body** consisting of statements.
-5. Ensure all lines in the function body are **indented** consistently.
-
-### Example:
-```python
-def my_func():
-    x = "I love Python programming!"
-    print(x)
-
-# Calling the function
-my_func()
+def add_two_numbers ():
+    num_one = 2
+    num_two = 3
+    total = num_one + num_two
+    print(total)
+add_two_numbers()
 ```
 
-### **Indentation**
-- Indentation is mandatory in Python. It determines the scope of the code block.
-- The function body must be indented uniformly.
+### Function Returning a Value - Part 1
 
-**Incorrect Indentation Example (produces an error):**
-```python
-def my_func():
-x = "I love Python programming!"  # Not indented
-print(x)  # Not indented
+Function can also return values, if a function does not have a return statement, the value of the function is None. Let us rewrite the above functions using return. From now on, we get a value from a function when we call the function and print it.
+
+```py
+def generate_full_name ():
+    first_name = 'Asabeneh'
+    last_name = 'Yetayeh'
+    space = ' '
+    full_name = first_name + space + last_name
+    return full_name
+print(generate_full_name())
+
+def add_two_numbers ():
+    num_one = 2
+    num_two = 3
+    total = num_one + num_two
+    return total
+print(add_two_numbers())
 ```
 
----
+### Function with Parameters
 
-## **Calling a Function**
-To execute a function, you must **call it** by its name followed by parentheses `()`.
+In a function we can pass different data types(number, string, boolean, list, tuple, dictionary or set) as a parameter
 
-### Example:
-```python
-def greet():
-    print("Hello!")
+- Single Parameter: If our function takes a parameter we should call our function with an argument
 
-# Call the function
-greet()
+```py
+  # syntax
+  # Declaring a function
+  def function_name(parameter):
+    codes
+    codes
+  # Calling function
+  print(function_name(argument))
 ```
 
----
+**Example:**
 
-## **Function Parameters/Arguments**
-- **Parameters**: Variables declared in the function definition.
-- **Arguments**: The data passed to the function when it is called.
+```py
+def greetings (name):
+    message = name + ', welcome to Python for Everyone!'
+    return message
 
-### Example:
-```python
-def hello(name):  # 'name' is the parameter
-    print("Hello", name)
+print(greetings('Asabeneh'))
 
-# Call the function with an argument
-hello("John")  # Output: Hello John
+def add_ten(num):
+    ten = 10
+    return num + ten
+print(add_ten(90))
+
+def square_number(x):
+    return x * x
+print(square_number(2))
+
+def area_of_circle (r):
+    PI = 3.14
+    area = PI * r ** 2
+    return area
+print(area_of_circle(10))
+
+def sum_of_numbers(n):
+    total = 0
+    for i in range(n+1):
+        total+=i
+    print(total)
+print(sum_of_numbers(10)) # 55
+print(sum_of_numbers(100)) # 5050
 ```
 
-### Multiple Parameters
-You can define a function with multiple parameters and pass multiple arguments separated by commas.
+- Two Parameter: A function may or may not have a parameter or parameters. A function may also have two or more parameters. If our function takes parameters we should call it with arguments. Let us check a function with two parameters:
 
-### Example:
-```python
-def add_nums(num1, num2):
-    sum = num1 + num2
-    print("Sum:", sum)
-
-# Call the function with two arguments
-add_nums(4, 3)  # Output: Sum: 7
+```py
+  # syntax
+  # Declaring a function
+  def function_name(para1, para2):
+    codes
+    codes
+  # Calling function
+  print(function_name(arg1, arg2))
 ```
 
----
+**Example:**
 
-## **Default Arguments**
-You can assign a **default value** to a parameter. If no argument is passed, the default value is used.
+```py
+def generate_full_name (first_name, last_name):
+    space = ' '
+      full_name = first_name + space + last_name
+      return full_name
+print('Full Name: ', generate_full_name('Asabeneh','Yetayeh'))
 
-### Example:
-```python
-def hello(name="Paul"):
-    print("Hello", name)
-
-hello("John")  # Output: Hello John
-hello()        # Output: Hello Paul (default value used)
-```
-
----
-
-## **Keyword Arguments**
-- **Keyword arguments** allow you to specify arguments by their parameter names, ignoring the order of arguments.
-
-### Example:
-```python
-def my_func(fruit1, fruit2, fruit3):
-    print("I love", fruit1)
-    print("I love", fruit2)
-    print("I love", fruit3)
-
-# Call the function using keyword arguments
-my_func(fruit3="banana", fruit2="apples", fruit1="orange")
-```
-
----
-
-## **The `return` Statement**
-- The `return` statement allows a function to send a value back to the caller.
-- Once a `return` statement is executed, the function stops running.
-
-### Example:
-```python
-def add_nums(num1, num2):
-    sum = num1 + num2
-    return sum  # Return the sum to the caller
-
-result = add_nums(4, 3)  # Store the returned value
-print("Result:", result)  # Output: Result: 7
-```
-
-**Important!**
-Any code after a `return` statement will not be executed:
-```python
-def add_nums(num1, num2):
-    sum = num1 + num2
+def sum_two_numbers (num_one, num_two):
+    sum = num_one + num_two
     return sum
-    print("This line will not be executed")
+print('Sum of two numbers: ', sum_two_numbers(1, 9))
 
-print(add_nums(4, 3))
+def calculate_age (current_year, birth_year):
+    age = current_year - birth_year
+    return age;
+
+print('Age: ', calculate_age(2021, 1819))
+
+def weight_of_object (mass, gravity):
+    weight = str(mass * gravity)+ ' N' # the value has to be changed to a string first
+    return weight
+print('Weight of an object in Newtons: ', weight_of_object(100, 9.81))
 ```
 
----
+### Passing Arguments with Key and Value
 
-## **Exercises**
-### **Exercise 1: Fix the Indentation**
-Correct the indentation in the following function:
-```python
-def my_func():
-msg = "Hello World!"
-print(msg)
-my_func()
+If we pass the arguments with key and value, the order of the arguments does not matter.
+
+```py
+# syntax
+# Declaring a function
+def function_name(para1, para2):
+    codes
+    codes
+# Calling function
+print(function_name(para1 = 'John', para2 = 'Doe')) # the order of arguments does not matter here
 ```
 
-**Solution:**
-```python
-def my_func():
-  msg = "Hello World!"
-  print(msg)
+**Example:**
 
-my_func()
+```py
+def print_fullname(firstname, lastname):
+    space = ' '
+    full_name = firstname  + space + lastname
+    print(full_name)
+print(print_fullname(firstname = 'Asabeneh', lastname = 'Yetayeh'))
+
+def add_two_numbers (num1, num2):
+    total = num1 + num2
+    print(total)
+print(add_two_numbers(num2 = 3, num1 = 2)) # Order does not matter
 ```
 
----
+### Function Returning a Value - Part 2
 
-### **Exercise 2: Add Two Numbers**
-Create a function called `add_numbers` that takes two parameters, adds them, and returns the result.
+If we do not return a value with a function, then our function is returning _None_ by default. To return a value with a function we use the keyword _return_ followed by the variable we are returning. We can return any kind of data types from a function.
 
-**Solution:**
-```python
-def add_numbers(x, y):
-    result = x + y
-    return result
+- Returning a string:
+**Example:**
 
-# Call the function and print the result
-print(add_numbers(4, 3))  # Output: 7
+```py
+def print_name(firstname):
+    return firstname
+print_name('Asabeneh') # Asabeneh
+
+def print_full_name(firstname, lastname):
+    space = ' '
+    full_name = firstname  + space + lastname
+    return full_name
+print_full_name(firstname='Asabeneh', lastname='Yetayeh')
 ```
 
----
+- Returning a number:
 
-## **Summary**
-- **Functions** group related tasks into reusable units.
-- Functions can have **parameters** for input and can use the `return` statement to send results back.
-- Indentation is critical in Python; be consistent.
-- Functions can have **default arguments** and use **keyword arguments** to improve flexibility.
+**Example:**
 
-This guide covered examples from basic function creation to advanced concepts like parameters, default values, and return statements.
+```py
+def add_two_numbers (num1, num2):
+    total = num1 + num2
+    return total
+print(add_two_numbers(2, 3))
 
+def calculate_age (current_year, birth_year):
+    age = current_year - birth_year
+    return age;
+print('Age: ', calculate_age(2019, 1819))
+```
+
+- Returning a boolean:
+  **Example:**
+
+```py
+def is_even (n):
+    if n % 2 == 0:
+        print('even')
+        return True    # return stops further execution of the function, similar to break 
+    return False
+print(is_even(10)) # True
+print(is_even(7)) # False
+```
+
+- Returning a list:
+  **Example:**
+
+```py
+def find_even_numbers(n):
+    evens = []
+    for i in range(n + 1):
+        if i % 2 == 0:
+            evens.append(i)
+    return evens
+print(find_even_numbers(10))
+```
+
+### Function with Default Parameters
+
+Sometimes we pass default values to parameters, when we invoke the function. If we do not pass arguments when calling the function, their default values will be used.
+
+```py
+# syntax
+# Declaring a function
+def function_name(param = value):
+    codes
+    codes
+# Calling function
+function_name()
+function_name(arg)
+```
+
+**Example:**
+
+```py
+def greetings (name = 'Peter'):
+    message = name + ', welcome to Python for Everyone!'
+    return message
+print(greetings())
+print(greetings('Asabeneh'))
+
+def generate_full_name (first_name = 'Asabeneh', last_name = 'Yetayeh'):
+    space = ' '
+    full_name = first_name + space + last_name
+    return full_name
+
+print(generate_full_name())
+print(generate_full_name('David','Smith'))
+
+def calculate_age (birth_year,current_year = 2021):
+    age = current_year - birth_year
+    return age;
+print('Age: ', calculate_age(1821))
+
+def weight_of_object (mass, gravity = 9.81):
+    weight = str(mass * gravity)+ ' N' # the value has to be changed to string first
+    return weight
+print('Weight of an object in Newtons: ', weight_of_object(100)) # 9.81 - average gravity on Earth's surface
+print('Weight of an object in Newtons: ', weight_of_object(100, 1.62)) # gravity on the surface of the Moon
+```
+
+### Arbitrary Number of Arguments
+
+If we do not know the number of arguments we pass to our function, we can create a function which can take arbitrary number of arguments by adding \* before the parameter name.
+
+```py
+# syntax
+# Declaring a function
+def function_name(*args):
+    codes
+    codes
+# Calling function
+function_name(param1, param2, param3,..)
+```
+
+**Example:**
+
+```py
+def sum_all_nums(*nums):
+    total = 0
+    for num in nums:
+        total += num     # same as total = total + num 
+    return total
+print(sum_all_nums(2, 3, 5)) # 10
+```
+
+### Default and Arbitrary Number of Parameters in Functions
+
+```py
+def generate_groups (team,*args):
+    print(team)
+    for i in args:
+        print(i)
+print(generate_groups('Team-1','Asabeneh','Brook','David','Eyob'))
+```
+
+### Function as a Parameter of Another Function
+
+```py
+#You can pass functions around as parameters
+def square_number (n):
+    return n * n
+def do_something(f, x):
+    return f(x)
+print(do_something(square_number, 3)) # 27
+```
+
+🌕 You achieved quite a lot so far.  Keep going! You have just completed day 11 challenges and you are 11 steps a head in to your way to greatness. Now do some exercises for your brain and muscles.
+
+
+## 💻 Exercises: Day 11
+
+### Exercises: Level 1
+
+1. Declare a function _add_two_numbers_. It takes two parameters and it returns a sum.
+2. Area of a circle is calculated as follows: area = π x r x r. Write a function that calculates _area_of_circle_.
+3. Write a function called add_all_nums which takes arbitrary number of arguments and sums all the arguments. Check if all the list items are number types. If not do give a reasonable feedback.
+4. Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. Write a function which converts °C to °F, _convert_celsius_to-fahrenheit_.
+5. Write a function called check-season, it takes a month parameter and returns the season: Autumn, Winter, Spring or Summer.
+6. Write a function called calculate_slope which return the slope of a linear equation
+7. Quadratic equation is calculated as follows: ax² + bx + c = 0. Write a function which calculates solution set of a quadratic equation, _solve_quadratic_eqn_.
+8. Declare a function named print_list. It takes a list as a parameter and it prints out each element of the list.
+9. Declare a function named reverse_list. It takes an array as a parameter and it returns the reverse of the array (use loops).
+
+```py
+print(reverse_list([1, 2, 3, 4, 5]))
+# [5, 4, 3, 2, 1]
+print(reverse_list1(["A", "B", "C"]))
+# ["C", "B", "A"]
+```
+
+10. Declare a function named capitalize_list_items. It takes a list as a parameter and it returns a capitalized list of items
+11. Declare a function named add_item. It takes a list and an item parameters. It returns a list with the item added at the end.
+
+```py
+food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
+print(add_item(food_staff, 'Meat'))     # ['Potato', 'Tomato', 'Mango', 'Milk','Meat']
+numbers = [2, 3, 7, 9]
+print(add_item(numbers, 5))      [2, 3, 7, 9, 5]
+```
+
+12. Declare a function named remove_item. It takes a list and an item parameters. It returns a list with the item removed from it.
+
+```py
+food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
+print(remove_item(food_staff, 'Mango'))  # ['Potato', 'Tomato', 'Milk'];
+numbers = [2, 3, 7, 9]
+print(remove_item(numbers, 3))  # [2, 7, 9]
+```
+
+13. Declare a function named sum_of_numbers. It takes a number parameter and it adds all the numbers in that range.
+
+```py
+print(sum_of_numbers(5))  # 15
+print(sum_of_numbers(10)) # 55
+print(sum_of_numbers(100)) # 5050
+```
+
+14. Declare a function named sum_of_odds. It takes a number parameter and it adds all the odd numbers in that range.
+15. Declare a function named sum_of_even. It takes a number parameter and it adds all the even numbers in that - range.
+
+### Exercises: Level 2
+
+1. Declare a function named evens_and_odds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+
+```py
+    print(evens_and_odds(100))
+    # The number of odds are 50.
+    # The number of evens are 51.
+```
+
+1. Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+1. Call your function _is_empty_, it takes a parameter and it checks if it is empty or not
+1. Write different functions which take lists. They should calculate_mean, calculate_median, calculate_mode, calculate_range, calculate_variance, calculate_std (standard deviation).
+
+### Exercises: Level 3
+
+1. Write a function called is_prime, which checks if a number is prime.
+1. Write a functions which checks if all items are unique in the list.
+1. Write a function which checks if all the items of the list are of the same data type.
+1. Write a function which check if provided variable is a valid python variable
+1. Go to the data folder and access the countries-data.py file.
+
+- Create a function called the most_spoken_languages in the world. It should return 10 or 20 most spoken languages in the world in descending order
+- Create a function called the most_populated_countries. It should return 10 or 20 most populated countries in descending order.
 ---
 
 🎉 CONGRATULATIONS ! 🎉
