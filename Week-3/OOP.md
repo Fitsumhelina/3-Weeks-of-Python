@@ -1,7 +1,6 @@
 
 
 # Object-Oriented Programming in Python
-
 ## Introduction
 Object-Oriented Programming (OOP) models real-world entities as objects, enabling developers to create programs that are modular, reusable, and scalable. OOP principles help manage complexity in large applications by breaking them down into smaller, more manageable components.
 
